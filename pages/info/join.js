@@ -41,7 +41,7 @@ function reducer(state, action) {
     case 'toggle':
       return {
           ...state,
-          [action.field] : !state.[action.field]
+          [action.field] : !state[action.field]
       };
     case 'onChange':
       return {
