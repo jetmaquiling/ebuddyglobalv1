@@ -1,0 +1,350 @@
+.main {
+    width: 100%;
+    background-color: #F1F1F1;
+    height: 100%;
+    overflow: hidden; 
+}
+/**********************************/
+
+.section {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: -60px 0px;
+    height: 100%;
+    justify-content: center;
+}
+
+/*************************************/
+@keyframes bodyanimate {
+    0%   {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+  }
+
+.mainBody {
+    height: 100%;
+    display: flex;
+    animation-name: bodyanimate;
+    animation-duration: 2s;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 120px 0px;
+}
+
+/* .mainBody1 {
+    
+} */
+
+
+
+/**************************************/
+
+.bodyImage {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image {
+    width: 200px;
+}
+
+
+/**************************************/
+
+
+
+
+.bodyContent {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    
+}
+
+/********************************************/
+
+.titleBody1 {
+    color: #C51111;
+    font-size: 35px;
+ }
+
+
+
+
+ /********************************************/
+
+
+ .textContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 0px;
+ }
+
+ .textBody{
+    color: rgb(34, 34, 34);
+    font-weight: 500;
+    margin: 0px;
+    padding: 0px 10px;
+    
+} 
+
+
+
+ /********************************************/
+
+
+
+.buttonContainer{
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+
+.buttonMainBox{
+    cursor: pointer;
+    transition: 0.5s;
+    padding: 10px 0px;
+    border-radius: 5px;
+    border-radius: 40px;
+    background:rgb(236, 236, 236);
+    display: flex;
+    justify-content: center;
+    margin: 25px 0px;
+    width: 250px;
+    align-self: center;
+}
+
+.buttonBox{
+    cursor: pointer;
+    transition: 0.5s;
+    padding: 10px 0px;
+    border-radius: 5px;
+    border-radius: 40px;
+    background:rgb(236, 236, 236);
+    display: flex;
+    justify-content: center;
+    margin: 25px 0px;
+    width: 60%;
+    align-self: center;
+}
+
+.specialButtonBox{
+    cursor: pointer;
+    transition: 0.5s;
+    padding: 10px 0px;
+    border-radius: 5px;
+    border-radius: 40px;
+    background:#C51111;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin: 25px 0px;
+    width: 60%;
+}
+
+.buttonBox:hover {
+    transition: 0.5s;
+    background:#ce2d2d;
+}
+/****************************************/
+
+
+
+
+/****************************************/
+.buttonFont{
+    color: #C51111;
+    transition: 0.5s;
+    margin: 0px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.specialButtonFont{
+    color: #f5f5f5;
+    transition: 0.5s;
+    margin: 0px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/****************************************/
+
+
+
+/****************************************/
+.documentContainer{
+    display: flex;
+    margin: 50px 0px;
+    justify-content: space-evenly;
+
+}
+
+.documentBox{
+    height: 100%;
+    overflow: hidden;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+@media only screen and (max-width: 1000px) {
+    /****************************************/
+  
+
+    .section {
+        height: 100%;
+    }
+
+    /****************************************/
+
+    .mainBody{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: flex-end;
+    }
+
+
+    /*********************************************/
+
+    .bodyContent {
+        width: 95%;
+        justify-content: flex-start;
+        height: 60%;
+    }
+
+    
+    /********************************************/
+
+    .buttonContainer{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+
+    .documentContainer{
+        display: flex;
+        margin: 50px 0px;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+    
+    }
+    
+    .documentBox{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+    
+    .documentSpecialBox{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+
+  }
+
+  
+
+  @media only screen and (max-width: 500px) {
+
+  
+  
+
+    /********************************************/
+
+    .mainBody{
+        height: 100%;
+        padding: 5px;
+        margin: 150px 0px
+    }
+
+
+ 
+    /********************************************/
+
+    .bodyContent {
+        width: 95%;
+        justify-content: flex-start;
+        height: 55%;
+        
+    }
+
+    /********************************************/
+    .titleBody {
+        
+        font-size: 22px;
+     }
+
+     .titleBody2 {
+        font-size: 22px;
+     }
+
+    /********************************************/
+
+    .textBody{
+        font-size: 17px;
+    }
+
+    .textBody2{
+        font-size: 17px;
+    }
+    
+    /********************************************/
+
+
+    .buttonFont{
+        font-size: 18px;
+        transition: 0.1s;
+    }
+
+    /********************************************/
+
+    
+
+    
+    .buttonFont:hover{
+        transform: none;
+    }
+
+    .buttonContainer{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buttonBox{
+        margin: 10px;
+        max-width: 200px;
+    }
+
+
+  }

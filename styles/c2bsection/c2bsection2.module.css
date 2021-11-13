@@ -1,0 +1,159 @@
+.main{
+    width: 100%;
+
+    background-repeat: no-repeat;
+    background:url("/SVG/whitebackground2.svg");
+    background-color: #F1F1F1;
+    background-size: cover;
+    background-position: center;
+}
+
+@keyframes bodyanimate {
+    0%   {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+  }
+
+  @keyframes bodyanimate2 {
+    0%   {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+  }
+
+.container1{
+    display: flex;
+    height: 50vh;
+    animation-name: bodyanimate2;
+    animation-duration: 2s;
+}
+
+
+
+.container2{
+    height: 50vh;
+    display: flex;
+    flex-direction: row-reverse;
+    animation-name: bodyanimate;
+    animation-duration: 2s;
+}
+
+.imageBox{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.textBox{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px;
+}
+
+.image{
+    width: 100%;
+    transition: 0.5s;
+}
+
+.image:hover{
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+
+.title{
+    font-size: 40px;
+    margin: 0px;
+    color: #C51111;
+}
+
+.subText{
+    margin: 0px;
+    color: #000;
+}
+
+.button{
+    color: #C51111;
+    cursor: pointer;
+    transition: 0.5s;
+    padding-bottom: 10px;
+    border-bottom: 5px solid rgba(0, 0, 0, 0);
+}
+
+.button:hover{
+    cursor: pointer;
+    border-bottom: 5px solid #C51111;
+    transition: 0.5s;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .container1{
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .container2{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .imageBox{
+        width: 100%;
+        height: 300px;
+    }
+    
+    .textBox{
+        width: 100%;
+
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    .container1{
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .container2{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .imageBox{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .textBox{
+        width: 100%;
+        padding: 20px 10px;
+
+    }
+    .title{
+        font-size: 25px;
+        margin: 0px
+    }
+    
+    .subText{
+        margin: 0px
+    }
+    
+
+}

@@ -1,0 +1,274 @@
+.main{
+    width: 100%;
+    display: flex;
+    position: fixed;
+    transition: 0.5s;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: rgba(255, 255, 255, 0);
+    z-index: 1000;
+    background: #C51111;
+}
+
+.off {
+    width: 100%;
+    position: fixed;
+    background: #C51111;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 4px 4px 12px 2px rgba(0, 10, 56, 0.295);
+}
+
+
+.navbar {
+    transition: 0.5s;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    display: flex;
+}
+
+
+
+.navbarFixed {
+    transition: 0.5s;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.tinylogoToken{
+    width: 10%;
+    margin: 0px 10px;
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 120px;
+}
+
+
+
+
+.navbar1 {
+    width: 15%;
+    display: flex;
+    align-items: flex-start;
+    
+}
+
+.navbar2 {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.navbar3 {
+    width: 15%;
+    padding: 0px 0px;
+    cursor: pointer;
+}
+
+.navbar4 {
+    display: none;
+    width: 0%;
+    padding: 0px 0px;
+}
+/***************************************************/
+
+.buttonFont{
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.803);
+    transition: 0.5s;
+    padding: 0px 10px;
+    font-weight: 400;
+}
+
+.buttonFont:hover{
+    color: rgba(255, 255, 255, 0.822);
+    transform: translate(0px,5px);
+    transition: 0.2s;
+}
+
+.buttonFontSpecial{
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.803);
+    cursor: pointer;
+    font-weight: 400;
+    margin: 0px;
+}
+
+
+
+/****************************************************/
+
+.buttonContainer{
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+
+.buttonBox{
+    margin: 0px 10px;
+    transition: 0.3s;
+    border-bottom: 5px solid rgba(255, 255, 255, 0);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.buttonBox:hover {
+    border-bottom: 5px solid #fff;
+}
+
+.buttonBoxSpecial{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    padding: 5px 0px;
+    transition: 0.3s;
+    border-radius: 40px;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.buttonBoxSpecial:hover{
+    transition: 0.3s;
+    background-color: #d44343;
+}
+
+
+.menuIcon{
+    color: #fff;
+    font-size: 30px;
+}
+
+.optionOpen{
+    width: 200px;
+    background-image: linear-gradient(to left,#23d5abf5, #03316ef6);
+    border-radius: 10px;
+    display: flex;
+    padding: 5px;
+    flex-direction: column;
+    position: absolute;
+    top: 85px;
+    animation-name: openOption;
+    animation-duration: 0.5s;
+    box-shadow: 4px 4px 12px 2px rgba(0, 0, 0, 0.384);
+}
+.optionClose{
+    width: 200px;
+    background-image: linear-gradient(#23d5abe7, #03316ee3);
+    border-radius: 10px;
+    padding: 5px;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 85px;
+}
+
+
+
+@keyframes openOption {
+    0%   {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+  }
+
+@media only screen and (max-width: 900px) {
+    .main{
+        width: 100%;
+    }
+    .navbar{
+        padding: 5px;
+        width: 100%;
+    }
+    .navbar1 {
+        width: 50%;
+        justify-content: flex-start;
+    }
+    .navbar2 {
+        width: 0%;
+        display: none;
+    }
+    .navbar3 {
+        max-width: 0%;
+        display: none;
+    }
+    .navbar4 {
+        width: 50%;
+        cursor: pointer;
+        justify-content: flex-end;
+        display: flex;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .main{
+        width: 100%;
+    }
+    .navbar{
+        
+        width: 100%;
+    }
+    .navbar1 {
+        width: 50%;
+        
+    }
+    .navbar3 {
+        width: 0%;
+    }
+
+    .navbar4{
+        width: 50%;
+        justify-content: flex-end;
+        display: flex;
+    }
+ 
+
+    .logoTitle1 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .logoTitle2 {
+        font-weight: bold;
+        font-size: 25px;
+        margin: 0px 0px;
+    }
+    
+    .logoTitle3 {
+        font-weight: 300;
+        font-size: 15px;
+    }
+
+
+ 
+    .tinylogoToken{
+        width: 10%;
+        margin: 0px 5px 0px 0px;
+    }
+
+    .logo{
+        width: 120px;
+    }
+    
+    
+    .h4animate{
+        transition: 0.1s;
+    }
+     
+
+  }

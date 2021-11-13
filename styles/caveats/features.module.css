@@ -1,0 +1,111 @@
+.main{
+    width: 100%;
+    padding: 50px 0px;
+    background: linear-gradient(90deg, rgba(255,113,95,1) 0%, rgba(255,76,67,1) 50%, rgba(226,89,122,1) 100%);
+}
+
+
+@keyframes bodyanimate {
+    0%   {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+  }
+.carousel{
+    width: 80%;
+    display: flex;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    animation-name: bodyanimate;
+    animation-duration: 2s;
+}
+
+
+.carouselButton{
+    margin: 0px 10px;
+    font-size: 100px;
+    color: rgba(255, 255, 255, 0.800);
+}
+
+.itemContainer1{
+    background-image: url("/shopebuddy.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    height: 100vh;
+}
+.itemContainer2{
+    background-image: url("/rewardpoints.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    height: 100vh;
+}
+.itemContainer3{
+    background-image: url("/homebusiness.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    height: 100vh;
+}
+
+.itemBox1{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+    
+    .carousel{
+        width: 95%;
+        display: flex;
+        margin: auto;
+        overflow: hidden;
+        border-radius: 10px;
+        
+    }
+
+    .itemContainer1{
+        height: 80vh;
+    }
+    .itemContainer2{
+        height: 80vh;
+    }
+    .itemContainer3{
+
+        height: 80vh;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    .main{
+        width: 100%;
+        padding: 0px 0px;
+    }
+    .carousel{
+        width: 100%;
+        border-radius: 0px;
+        
+    }
+
+    
+
+}
+
+
+
+
+
+
