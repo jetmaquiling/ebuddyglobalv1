@@ -3,7 +3,7 @@ import Head from 'next/head'
 import React from 'react'
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Chat from '@/components/chatFloat/chat'
-import Popup from '@/components/caveat/PopUp';
+import Popup from '@/components/caveat/popup';
 function MyApp({ Component, pageProps }) {
   const matches = useMediaQuery('(min-width:900px)');
 
