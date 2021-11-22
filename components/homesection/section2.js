@@ -24,7 +24,7 @@ export default function Section2({openVideo,setOpenVideo}) {
             <div className={style.mainBody}>
             
                 <div className={style.bodyContent}>
-                    <h1 className={style.titleBody1}>About eBuddy Global</h1>
+                    <h1 className={style.titleBody1}>About Global eBuddy </h1>
                     <p className={style.textBody2}>A GLOBAL PLATFORM that incorporates a Fusion of MAJOR INDUSTRIES made easy and available for ALL.</p>
                     <Link href='/info/about'>
                         <div  className={`${style.buttonBox} `} >

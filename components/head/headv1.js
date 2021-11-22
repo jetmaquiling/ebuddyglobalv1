@@ -28,22 +28,18 @@ const HeadV1 = ({pos, open, setOpen}) => {
                 
                 <Link href="https://beta.phb2020.com/register">
                 <div  className={style.buttonBox}  >
-                  <h4 className={style.buttonFont}>Create Account</h4>
+                  <h4 className={style.buttonFont}>Join</h4>
                 </div>
                 </Link>
 
 
                 <Link href="https://ebuddy.ph/">
                 <div  className={style.buttonBox}   >
-                  <h4 className={style.buttonFont}>eBuddy</h4>
+                  <h4 className={style.buttonFont}>Shop</h4>
                 </div>
                 </Link>
 
-                <Link href="/info/products">
-                <div  className={style.buttonBox}  >
-                  <h4 className={style.buttonFont}>Products</h4>
-                </div>
-                </Link>
+               
 
                 <Link  href="/info/plan">
                 <div  className={style.buttonBox} >
@@ -51,13 +47,25 @@ const HeadV1 = ({pos, open, setOpen}) => {
                 </div>
                 </Link>
 
-                <Link  href="/info/community">
+                <Link  href="/info/plan">
                 <div  className={style.buttonBox} >
                   <h4 className={style.buttonFont}>Community</h4>
                 </div>
+                </Link>        
+
+                <Link  href="/info/community">
+                <div  className={style.buttonBox} >
+                  <h4 className={style.buttonFont}>Tools</h4>
+                </div>
+                </Link>
+
+                <Link href="/info/products">
+                <div  className={style.buttonBox}  >
+                  <h4 className={style.buttonFont}>Docs</h4>
+                </div>
                 </Link>
                 
-                
+
             </div>
          
          
@@ -66,7 +74,7 @@ const HeadV1 = ({pos, open, setOpen}) => {
           </div>
 
           <div className={style.navbar4} onClick={()=>{setOpen(!open)}} >   
-                <MenuIcon style={{color: '#fff', fontSize: '40px', cursor: 'pointer'}} />
+                <MenuIcon style={{color: '#fff', fontSize: '30px', cursor: 'pointer'}} />
           </div>
           
           

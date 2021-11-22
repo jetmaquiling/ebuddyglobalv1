@@ -58,21 +58,21 @@
 
 
 .navbar1 {
-    width: 15%;
+    width: 10%;
     display: flex;
     align-items: flex-start;
     
 }
 
 .navbar2 {
-    width: 70%;
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
 }
 
 .navbar3 {
-    width: 15%;
+    width: 10%;
     padding: 0px 0px;
     cursor: pointer;
 }
@@ -262,7 +262,7 @@
     }
 
     .logo{
-        width: 120px;
+        width: 100px;
     }
     
     

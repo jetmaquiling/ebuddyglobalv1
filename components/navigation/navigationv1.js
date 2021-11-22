@@ -7,18 +7,18 @@ import CloseIcon from '@material-ui/icons/Close';
 
 const NavigationV1 = ({pos,open, setOpen}) => {
   
-  const [drawer, setDrawer] = React.useState(null)
-
   return (
     <div className={open  ? style.off : style.main}>
 
         <div className={style.navbar}>
           <div className={style.navbar1}>
               <div className={style.tinylogoToken}>
-                <img src={'/Logo/ebuddyglobalLogo.png'} alt="Logo"  className={style.logoToken}/>
+                <img src={'/Logo/EbuddyLogo.png'} alt="Logo"  className={style.logoToken}/>
               </div>
           </div>
-
+          <div className={style.midnav}>
+            <div   id="google_translate_element2" ></div>
+          </div>
           <div className={style.navbar3} onClick={()=>{setOpen(!open)}}>      
                <CloseIcon style={{color:"#fff", fontSize: '40px'}}/>
           </div>
@@ -56,7 +56,12 @@ const NavigationV1 = ({pos,open, setOpen}) => {
               <div  className={style.buttonBox}>
                 <Link href="/info/products"><h4 className={style.h4animate}>Products</h4></Link>
               </div>
-              <div id="google_translate_element2" ></div>
+
+              <div  className={style.buttonBox}>
+                <Link href="/info/products"><h4 className={style.h4animate}>Tools/Resource</h4></Link>
+              </div>
+
+              
             
               
 

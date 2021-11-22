@@ -11,6 +11,21 @@ export default function ProductSection2 () {
 
   return (
       <div className={style.main}>
+           <LazyLoad height={10}>
+            <div className={style.container2}>
+
+              <div className={style.imageBox}>
+              <img src="/Product/Slide20.JPG" className={style.image} />
+              </div>
+
+              <div className={style.textBox}>
+                  <h3 className={style.title}>Melliwil Carbo Vegetalis</h3>
+                  <p className={style.subText}>Affiliate marketing is a type of performance-based marketing in which a business rewards one or more affiliates for each visitor or customer brought by the affiliate's own marketing efforts.</p>
+                  <Link href="/info/join"><h4 className={style.button}>Buy Now</h4></Link>
+              </div>
+            </div>
+          </LazyLoad>
+
           <LazyLoad height={10}>
             <div className={style.container1}>
 

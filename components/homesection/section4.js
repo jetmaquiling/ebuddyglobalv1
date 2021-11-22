@@ -23,7 +23,7 @@ export default function Section4() {
             </div>
 
             <div className={`${style.bodyContent} `}>
-              <h1 className={style.titleBody}>eBuddy Products</h1>
+              <h1 className={style.titleBody}>Global eBuddy Products</h1>
               <p className={style.textBody}> Be the Leading Provider of Networked Life-Enhancing Products and Services Via Easy and Lucrative E-Commerce Platform</p>
               <div  className={style.buttonContainer} >
                 <Link href='https://ebuddy.ph/'>

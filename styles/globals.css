@@ -1,4 +1,4 @@
-html,
+bhtml,
 body {
   padding: 0;
   margin: 0;
@@ -75,4 +75,11 @@ fieldset{
 
 .MuiFormControl-root{
   width: 100% !important;
+}
+
+
+#__next {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }

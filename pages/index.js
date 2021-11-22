@@ -30,8 +30,8 @@ export default function LandingPage () {
           <title>PHBWorx - We are A People Helping Business</title>
           <meta name="description" content="We make it easy for you! Comfortable Life For All! Earn While Spending"/>
           <meta property="og:type"               content="website" />
-          <meta property="og:title"              content="PHBWorx - We are A People Helping Business" />
-          <meta property="og:image"              content='./Thumbnail/phbworx.png' />
+          <meta property="og:title"              content="Global ebuddy  - We are A People Helping Business" />
+          <meta property="og:image"              content='./Thumbnail/ebuddy.png' />
         </Head>
         
           <Youtube openVideo={openVideo} setOpenVideo={setOpenVideo}/>

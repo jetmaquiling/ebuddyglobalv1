@@ -19,7 +19,7 @@ export default function Footer1() {
                 <div className={style.maincontainer}>
                     <div className={style.section1}>
                         <h3 className={style.label}>
-                            About PHBWORX International 
+                            About Global eBuddy
                         </h3>
 
                         <div className={style.links1}>
@@ -95,7 +95,7 @@ export default function Footer1() {
                         
                     </div>
                 </div>
-                <h3 className={style.copywrite}>Copywrite©ebuddy.ph•2021</h3>
+                <h3 className={style.copywrite}>Copyright©globalebuddy.ph•2021</h3>
         </div>
   );
 }
