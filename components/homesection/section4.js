@@ -24,7 +24,7 @@ export default function Section4() {
 
             <div className={`${style.bodyContent} `}>
               <h1 className={style.titleBody}>Global eBuddy Products</h1>
-              <p className={style.textBody}> Be the Leading Provider of Networked Life-Enhancing Products and Services Via Easy and Lucrative E-Commerce Platform</p>
+              <p className={style.textBody}>Be the leading provider of Life-Enhancing Products Internationally, that ensures health benefits to customers.</p>
               <div  className={style.buttonContainer} >
                 <Link href='https://ebuddy.ph/'>
                   <div  className={`${style.buttonBox}`} >

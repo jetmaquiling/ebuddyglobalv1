@@ -27,7 +27,7 @@ export default function JoinSection1 ({dispatch, state, toggleSlide, slide, warn
             </div>
 
             <div className={style.contentSide}>
-                <h1 className={style.title} >Let's Get Starting.</h1>
+                <h1 className={style.title} >Let's Get Started.</h1>
                 <p className={style.warning}>{warning && "Atleast choose one."}</p>
                 <h2 className={style.label}>
                     What are you interested in? 

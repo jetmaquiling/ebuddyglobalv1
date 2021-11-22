@@ -8,29 +8,34 @@ import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 
 
 const c2bData = [
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, simorets molestiae quas vel sint commodi qestras",
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, simorets molestiae quas vel sint commodi qestras",
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, simorets molestiae quas vel sint commodi qestras",
-    
+    "Build your organization that’s both deep and wide with Unilevel Compensation Plan",
+    "Earn Up to the 10th Level as your direct sponsor bonus.",
+    "Earn 30% cashback for every purchase of products.",
+    "With Leadership Bonus, you can earn percentages up to the infinite level base on your ranking status.",
+    "E-commerece integrated, you will earn income through every purchase in ebuddy.ph under your account.",
+    "Enjoy C2B Plan Unilevel Bonus for only 200CV as your personal monthly consumption.",
+    "From womb to tomb products, you can purchase or market a viriety of products that is essential, consumable, and beneficial.",
+    "Earn reward points that can be converted into products or digital token"
 ]
 
 
 const boosterData = [
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, simorets molestiae quas vel sint commodi qestras",
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, simorets molestiae quas vel sint commodi qestras",
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, simorets molestiae quas vel sint commodi qestras",
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, simorets molestiae quas vel sint commodi qestras",
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, simorets molestiae quas vel sint commodi qestras",
-    
+    "An opportunity to enjoy residual income with Binary Compensation Plan",
+    "Earn up to Php 100,000 pairing bonus",
+    "Choose the packages according to your needs",
+    "Get a percentage of your investment as a return daily",
+    "Payout is protected through capped commissions",
+    "Receive refferal bonus for every new members in your binary tree.",
+    "Earn reward points that can be converted into products or digital token"
 ]
 
 
 const comboData = [
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, simorets molestiae quas vel sint commodi qestras",
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, simorets molestiae quas vel sint commodi qestras",
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, simorets molestiae quas vel sint commodi qestras",
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, simorets molestiae quas vel sint commodi qestras",
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, simorets molestiae quas vel sint commodi qestra",
+    "Get more opportunities for earning with the combination of Booster and C2b Plan",
+    "Enjoy residual income while building organization with Combo Plan",
+    "Improved compensations and bonuses received by the members of the network.",
+    "Have the benefits of both Booster and C2B Plan",
+    "Choose the packages according to your needs",
 ]
 
 
@@ -47,13 +52,12 @@ export default function Section5() {
 
             <div className={style.bodyContent}>
                 <h1 className={style.titleBody1}>Choose Your Business Plan</h1>
-                <p className={style.textBody2}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-                    simorets molestiae quas vel sint commodi qestra s</p>
-                <p className={style.textBody2}>Lorem ipsum dolor sit amet consectetur adipisicing elit. s</p>
+                <p className={style.textBody2}>No matter what Business Plan you decide to pursue, it’s smart to think of your business plan that details your goals and how you plan to achieve them. A Global eBuddy helps you to examine the effectiveness of your business idea, giving you a better shot at success.</p>
             </div>
 
             <div className={style.documentContainer}>
                 
+                  
                     <div className={style.documentBox}>
                         <h1 className={style.titleBody2}> C2B Plan</h1>
                         <div className={`${style.bodyImage}`}>
@@ -80,10 +84,10 @@ export default function Section5() {
                                 </div>
                             </Link>
                     </div>
-                    
+
                     <div className={style.documentBox}>
-                    
-                       
+                        
+                        
                         <h1 className={style.titleBody2}> Booster Plan</h1>
                         <div className={`${style.bodyImage}`}>
                             <img src='/Resource/binary.png'  alt="PHB"  className={`${style.image} ${style.image1}`} />
@@ -110,6 +114,7 @@ export default function Section5() {
                             </div>
                         </Link>
                     </div>
+
 
                     <div className={style.documentSpecialBox}>
                         

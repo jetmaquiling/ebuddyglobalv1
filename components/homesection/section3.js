@@ -19,7 +19,7 @@ export default function Section3() {
         <div className={`${style.mainBody}`}>
             <div className={`${style.bodyContent} `}>
               <h1 className={style.titleBody}>Global eBuddy COMMUNITY</h1>
-              <p className={style.textBody}>Be the Leading Provider of Networked Life-Enhancing Products and Services Via Easy and Lucrative E-Commerce Platform</p>
+              <p className={style.textBody}>Be Part of the Community Worldwide Enjoying Well-Being Economically, Socially and Ethically.</p>
               <div  className={style.buttonContainer} >
                 <Link href='/info/join'>
                   <div  className={`${style.buttonBox}`} >

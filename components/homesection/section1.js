@@ -8,7 +8,8 @@ import Link from 'next/link'
 
 
 export default function Section1() {
-  
+
+    
 
   return (
     <div className={style.main}>
@@ -19,8 +20,15 @@ export default function Section1() {
         <div className={`${style.mainBody}`}>
              
             <div className={`${style.bodyContent} `}>
-              <h1 className={style.titleBody}>Be Part of the Community Worldwide Enjoying Well-Being Economically, Socially and Ethically.</h1>
-              <div  className={style.buttonContainer} >
+              
+          
+              <div className={`${style.carouselContainer} `}>
+                <span  className={style.carouselBox}></span>
+                <h1  className={style.titleBody}>A GLOBAL PLATFORM that incorporates a Fusion of Major Industries made easy and available for ALL.</h1>
+                
+              </div>
+    
+              <div  className={style.buttonContainer} > 
                 <Link href='/info/join'>
                   <div  className={`${style.buttonBox}`} >
                     <h4 className={style.buttonFontSpecial}>Join Now </h4> 
