@@ -6,190 +6,64 @@ import Image from 'next/image';
 import Head from 'next/head'
 import style from '@/styles/c2bsection/c2bsection2.module.css'
 import LazyLoad from 'react-lazyload';
+import moment from 'moment';
+import config from '@/config/configuration.json';
+import axios from 'axios';
+import qs from 'qs'
+
 
 export default function ProductSection2 () {
+  const [product, setProduct] = React.useState([])
+  const [side, setSide] = React.useState(true);
+
+  React.useEffect(() => {
+
+      async function getBlog() { 
+          try{
+              const query = qs.stringify({ _where: { _or:[{"subject": "PRODUCT"}]} });
+              const newdata = await axios.get(`${config.SERVER_URL}/blogs?${query}`);
+              console.log("nEw Data",newdata.data);
+              setProduct(newdata.data);
+
+          }catch(err){
+              console.log("second request",err)
+          }
+          
+      }
+      getBlog()
+
+  }, [])
+
+
+
 
   return (
       <div className={style.main}>
-           <LazyLoad height={10}>
-            <div className={style.container2}>
+          {product === [] ? <h1>LOADING....</h1> : 
+            product.map((data,index)=>{
+      
+              return (
+                  <LazyLoad height={10} key={data.title}>
+                    <div className={index % 2 == 0 ? style.container2 : style.container1}>
 
-              <div className={style.imageBox}>
-              <img src="/Product/Slide20.JPG" className={style.image} />
-              </div>
+                      <div className={style.imageBox}>
+                      <img src={data.clipboard.url} className={style.image} />
+                      </div>
 
-              <div className={style.textBox}>
-                  <h3 className={style.title}>Melliwil Carbo Vegetalis</h3>
-                  <p className={style.subText}>Affiliate marketing is a type of performance-based marketing in which a business rewards one or more affiliates for each visitor or customer brought by the affiliate's own marketing efforts.</p>
-                  <Link href="/info/join"><h4 className={style.button}>Buy Now</h4></Link>
-              </div>
-            </div>
-          </LazyLoad>
+                      <div className={style.textBox}>
+                          <h3 className={style.title}>{data.title}</h3>
+                          <p className={style.subText}>{data.description}</p>
+                          <Link href={`/info/article/${data.id}`}><h4 className={style.button}>Learn More</h4></Link>
 
-          <LazyLoad height={10}>
-            <div className={style.container1}>
-
-              <div className={style.imageBox}>
-              <img src="/Product/Slide9.JPG" className={style.image} />
-              </div>
-
-              <div className={style.textBox}>
-                  <h3 className={style.title}>Scalar Quantum Pendant</h3>
-                  <p className={style.subText}>Affiliate marketing is a type of performance-based marketing in which a business rewards one or more affiliates for each visitor or customer brought by the affiliate's own marketing efforts.</p>
-                  <Link href="/info/join"><h4 className={style.button}>Buy Now</h4></Link>
-              </div>
-            </div>
-          </LazyLoad>
-
-          <LazyLoad height={10}>
-            <div className={style.container2}>
-
-              <div className={style.imageBox}>
-              <img src="/Product/Slide10.JPG" className={style.image} />
-              </div>
-
-              <div className={style.textBox}>
-                  <h3 className={style.title}>Scalar Quantum Bracelet</h3>
-                  <p className={style.subText}>Affiliate marketing is a type of performance-based marketing in which a business rewards one or more affiliates for each visitor or customer brought by the affiliate's own marketing efforts.</p>
-                  <Link href="/info/join"><h4 className={style.button}>Buy Now</h4></Link>
-              </div>
-            </div>
-          </LazyLoad>
-
-          <LazyLoad height={10}>
-          <div className={style.container1}>
-
-            <div className={style.imageBox}>
-            <img src="/Product/Slide11.JPG" className={style.image} />
-            </div>
-
-            <div className={style.textBox}>
-                <h3 className={style.title}>Scalar Quantum Shield</h3>
-                <p className={style.subText}>Affiliate marketing is a type of performance-based marketing in which a business rewards one or more affiliates for each visitor or customer brought by the affiliate's own marketing efforts.</p>
-                <Link href="/info/join"><h4 className={style.button}>Buy Now</h4></Link>
-            </div>
-          </div>
-          </LazyLoad>
-
-          <LazyLoad height={10}>
-            <div className={style.container2}>
-
-              <div className={style.imageBox}>
-              <img src="/Product/Slide12.JPG" className={style.image} />
-              </div>
-
-              <div className={style.textBox}>
-                  <h3 className={style.title}>Scalar Quantum Flask</h3>
-                  <p className={style.subText}>Affiliate marketing is a type of performance-based marketing in which a business rewards one or more affiliates for each visitor or customer brought by the affiliate's own marketing efforts.</p>
-                  <Link href="/info/join"><h4 className={style.button}>Buy Now</h4></Link>
-              </div>
-            </div>
-          </LazyLoad>
-
-          <LazyLoad height={10}>
-          <div className={style.container1}>
-
-            <div className={style.imageBox}>
-            <img src="/Product/Slide13.JPG" className={style.image} />
-            </div>
-
-            <div className={style.textBox}>
-                <h3 className={style.title}>Scalar Quantum Watch</h3>
-                <p className={style.subText}>Affiliate marketing is a type of performance-based marketing in which a business rewards one or more affiliates for each visitor or customer brought by the affiliate's own marketing efforts.</p>
-                <Link href="/info/join"><h4 className={style.button}>Buy Now</h4></Link>
-            </div>
-          </div>
-          </LazyLoad>
-
-          <LazyLoad height={10}>
-            <div className={style.container2}>
-
-              <div className={style.imageBox}>
-              <img src="/Product/Slide14.JPG" className={style.image} />
-              </div>
-
-              <div className={style.textBox}>
-                  <h3 className={style.title}>Quantum Napkin</h3>
-                  <p className={style.subText}>Affiliate marketing is a type of performance-based marketing in which a business rewards one or more affiliates for each visitor or customer brought by the affiliate's own marketing efforts.</p>
-                  <Link href="/info/join"><h4 className={style.button}>Buy Now</h4></Link>
-              </div>
-            </div>
-          </LazyLoad>
-
-          <LazyLoad height={10}>
-          <div className={style.container1}>
-
-            <div className={style.imageBox}>
-            <img src="/Product/Slide15.JPG" className={style.image} />
-            </div>
-
-            <div className={style.textBox}>
-                <h3 className={style.title}>Quantum-C</h3>
-                <p className={style.subText}>Affiliate marketing is a type of performance-based marketing in which a business rewards one or more affiliates for each visitor or customer brought by the affiliate's own marketing efforts.</p>
-                <Link href="/info/join"><h4 className={style.button}>Buy Now</h4></Link>
-            </div>
-          </div>
-          </LazyLoad>
-
-          <LazyLoad height={10}>
-            <div className={style.container2}>
-
-              <div className={style.imageBox}>
-              <img src="/Product/Slide16.JPG" className={style.image} />
-              </div>
-
-              <div className={style.textBox}>
-                  <h3 className={style.title}>Cardio Nerve</h3>
-                  <p className={style.subText}>Affiliate marketing is a type of performance-based marketing in which a business rewards one or more affiliates for each visitor or customer brought by the affiliate's own marketing efforts.</p>
-                  <Link href="/info/join"><h4 className={style.button}>Buy Now</h4></Link>
-              </div>
-            </div>
-          </LazyLoad>
-
-          <LazyLoad height={10}>
-          <div className={style.container1}>
-
-            <div className={style.imageBox}>
-            <img src="/Product/Slide17.JPG" className={style.image} />
-            </div>
-
-            <div className={style.textBox}>
-                <h3 className={style.title}>TCK</h3>
-                <p className={style.subText}>Affiliate marketing is a type of performance-based marketing in which a business rewards one or more affiliates for each visitor or customer brought by the affiliate's own marketing efforts.</p>
-                <Link href="/info/join"><h4 className={style.button}>Buy Now</h4></Link>
-            </div>
-          </div>
-          </LazyLoad>
-
-          <LazyLoad height={10}>
-            <div className={style.container2}>
-
-              <div className={style.imageBox}>
-              <img src="/Product/Slide18.JPG" className={style.image} />
-              </div>
-
-              <div className={style.textBox}>
-                  <h3 className={style.title}>Meta Skin</h3>
-                  <p className={style.subText}>Affiliate marketing is a type of performance-based marketing in which a business rewards one or more affiliates for each visitor or customer brought by the affiliate's own marketing efforts.</p>
-                  <Link href="/info/join"><h4 className={style.button}>Buy Now</h4></Link>
-              </div>
-            </div>
-          </LazyLoad>
-
-          <LazyLoad height={10}>
-          <div className={style.container1}>
-
-            <div className={style.imageBox}>
-            <img src="/Product/Slide19.JPG" className={style.image} />
-            </div>
-
-            <div className={style.textBox}>
-                <h3 className={style.title}>We Juice</h3>
-                <p className={style.subText}>Affiliate marketing is a type of performance-based marketing in which a business rewards one or more affiliates for each visitor or customer brought by the affiliate's own marketing efforts.</p>
-                <Link href="/info/join"><h4 className={style.button}>Buy Now</h4></Link>
-            </div>
-          </div>
-          </LazyLoad>
+                          
+                      </div>
+                    </div>
+                  </LazyLoad>
+              )
+            })
+            
+          
+          }
       </div>
   );
 }

@@ -80,6 +80,7 @@
 .titleBody1 {
     color: #C51111;
     font-size: 35px;
+    margin: 0px;
  }
 
 
@@ -89,21 +90,34 @@
 
 
  .textContainer{
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     padding: 10px;
-    margin: 0px;
+    margin: 5px 0px;
+    border-radius: 10px;
+    background-color: #C51111;
+    box-shadow: 5px 5px 10px -5px #000;
+    color: #fff;
+    transition: 0.5s;
+    cursor: pointer;
  }
 
- .textBody{
-    color: rgb(34, 34, 34);
-    font-weight: 500;
-    margin: 0px;
-    padding: 0px 10px;
+ 
+ .textContainer:hover{
+   background-color: #c51111c7;
+   transition: 0.5s;
+}
+
+
+ .textTitle{
+    font-weight: 400;
+    margin: 0px 5px;
     
 } 
+
+
 
 
 
@@ -194,13 +208,12 @@
     display: flex;
     margin: 50px 0px;
     justify-content: space-evenly;
-
+    width: 100%;
 }
 
 .documentBox{
     height: 100%;
-    overflow: hidden;
-    width: 60%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     
@@ -252,7 +265,7 @@
         justify-content: space-evenly;
         flex-direction: column;
         align-items: center;
-    
+        
     }
     
     .documentBox{
@@ -276,7 +289,11 @@
 
   @media only screen and (max-width: 500px) {
 
-  
+    .titleBody1 {
+        font-size: 20px;
+        margin: 0px;
+     }
+    
   
 
     /********************************************/
@@ -317,6 +334,10 @@
     .textBody2{
         font-size: 17px;
     }
+
+    .textTitle{
+        line-height: 20px;
+    }
     
     /********************************************/
 
@@ -343,7 +364,7 @@
 
     .buttonBox{
         margin: 10px;
-        max-width: 200px;
+        min-width: 200px;
     }
 
 

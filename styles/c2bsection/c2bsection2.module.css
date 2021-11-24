@@ -84,6 +84,13 @@
 .subText{
     margin: 0px;
     color: #000;
+    line-height: 25px
+}
+
+
+.buttonContainer{
+    display: flex;
+
 }
 
 .button{
@@ -92,6 +99,7 @@
     transition: 0.5s;
     padding-bottom: 10px;
     border-bottom: 5px solid rgba(0, 0, 0, 0);
+    margin: 20px 20px 0px 0px;
 }
 
 .button:hover{
@@ -144,7 +152,7 @@
     
     .textBox{
         width: 100%;
-        padding: 20px 10px;
+        padding: 30px 20px;
 
     }
     .title{
