@@ -3,6 +3,7 @@ import Head from 'next/head'
 import * as style from '@/styles/navigation/headv1.module.css'
 import Link from 'next/link'
 import MenuIcon from '@material-ui/icons/Menu';
+import Products from './../../pages/info/products';
 
 
 
@@ -47,15 +48,16 @@ const HeadV1 = ({pos, open, setOpen}) => {
                 </div>
                 </Link>
 
-                <Link  href="/info/plan">
+            
+                <Link  href="/info/products">
                 <div  className={style.buttonBox} >
-                  <h4 className={style.buttonFont}>Community</h4>
+                  <h4 className={style.buttonFont}>Products</h4>
                 </div>
-                </Link>        
+                </Link>     
 
-                <Link  href="/info/community">
+                <Link  href="/info/article">
                 <div  className={style.buttonBox} >
-                  <h4 className={style.buttonFont}>Tools</h4>
+                  <h4 className={style.buttonFont}>Read</h4>
                 </div>
                 </Link>
 

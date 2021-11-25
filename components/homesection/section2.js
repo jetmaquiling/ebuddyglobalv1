@@ -36,7 +36,7 @@ export default function Section2({openVideo,setOpenVideo}) {
                 <div className={style.documentContainer}>
                     <div className={style.documentBox}>
                         <h1 className={style.titleBody2}>How It Works?</h1>
-                        <p className={style.textBody2}>We all have one thing in common, we are all CONSUMERS. The main concept of PHBworx is the ablility to convert consumers into BUSINESSMAN. There are so many ways to earn and it is up to YOU to choose.</p>
+                        <p className={style.textBody2}>We all have one thing in common, we are all CONSUMERS. The main concept of Global eBuddy is the ablility to convert consumers into BUSINESSMAN. There are so many ways to earn and it is up to YOU to choose.</p>
                         <div  className={style.buttonContainer} >
                         <div  className={`${style.buttonBox} `} onClick={()=>toggle("https://www.youtube.com/embed/V5Is1K5Bprs")} >
                             <h4 className={style.buttonFont} >Watch Video</h4>
@@ -48,22 +48,20 @@ export default function Section2({openVideo,setOpenVideo}) {
                     <div className={style.documentBox}>
                     
                         <h1 className={style.titleBody2}>Cashback</h1>
-                        <p className={style.textBody2}>Earn 30% cashback for your every purchase in the platform of PHBworx and eBuddy.</p>
+                        <p className={style.textBody2}>Earn 30% cashback for your every purchase in the platform of Global eBuddy.</p>
                         <br/>
                     
                         <h1 className={style.titleBody2}>Reward Points</h1>
-                        <p className={style.textBody2}>Earn 10% reward points or your every purchase in the platform of PHBworx and eBuddy. Convert reward points to Products or DIGITAL TOKENS</p>
+                        <p className={style.textBody2}>Earn 10% reward points or your every purchase in the platform of Global eBuddy. Convert reward points to Products or DIGITAL TOKENS</p>
                     </div>
 
                     <div className={style.documentBox}>
                         
                         <h1 className={style.titleBody2}> Passive Income</h1>
-                        <p className={style.textBody2}>Earn percentages </p>
+                        <p className={style.textBody2}>Enjoy residual income while building organization with our Business Plan</p>
                         <br/>
-                        <h1 className={style.titleBody2}> Bonuses</h1>
-                        <p className={style.textBody2}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-                            simorets
-                            molestiae quas vel sint commodi qestra s</p>
+                        <h1 className={style.titleBody2}> Compensations</h1>
+                        <p className={style.textBody2}>Improved compensations and bonuses received by the members of the network.</p>
                     </div>
                 </div>
 

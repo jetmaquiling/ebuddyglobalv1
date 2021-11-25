@@ -18,10 +18,9 @@ export default function AboutSection1() {
             <div className={style.mainBody}>
             
                 <div className={style.bodyContent}>
-                    <h1 className={style.titleBody1}>About PHBworx</h1>
-                    <p className={style.textBody2}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-                        simorets molestiae quas vel sint commodi qestra s</p>
-                    <p className={style.textBody2}>Lorem ipsum dolor sit amet consectetur adipisicing elit. s</p>
+                    <h1 className={style.titleBody1}>About Global eBuddy</h1>
+                    <p className={style.textBody2}>A GLOBAL PLATFORM that incorporates a Fusion of MAJOR INDUSTRIES made easy and available for ALL.</p>
+                    <p className={style.textBody2}>We make it easy for you.</p>
                 </div>
                 
             </div>

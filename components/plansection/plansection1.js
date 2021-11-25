@@ -20,7 +20,7 @@ export default function PlanSection1() {
              
             <div className={`${style.bodyContent} `}>
               <h1 className={style.titleBody}>Who is eBuddy Global For?</h1>
-              <h1 className={style.textBody}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, simorets molestiae quas vel sint commodi qestras</h1>
+              <h1 className={style.textBody}>We all have one thing in common, we are all CONSUMERS. The main concept of Global eBuddy is the ablility to convert consumers into BUSINESSMAN. There are so many ways to earn and it is up to YOU to choose.</h1>
             </div>
 
             <div className={`${style.bodyImage}`}>

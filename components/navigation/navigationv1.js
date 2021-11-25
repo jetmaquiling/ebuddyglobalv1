@@ -49,16 +49,13 @@ const NavigationV1 = ({pos,open, setOpen}) => {
                 <Link href="https://ebuddy.ph/"><h4 className={style.h4animate}>ebuddy.ph</h4></Link>
               </div>
               
-              <div  className={style.buttonBox}>
-                <Link href="/info/community"><h4 className={style.h4animate}>Community</h4></Link>
-              </div>
 
               <div  className={style.buttonBox}>
                 <Link href="/info/products"><h4 className={style.h4animate}>Products</h4></Link>
               </div>
 
               <div  className={style.buttonBox}>
-                <Link href="/info/products"><h4 className={style.h4animate}>Tools/Resource</h4></Link>
+                <Link href="/info/article"><h4 className={style.h4animate}>Read</h4></Link>
               </div>
 
               
@@ -69,7 +66,7 @@ const NavigationV1 = ({pos,open, setOpen}) => {
 
         </div>
         <div className={style.rightsBox}>
-                    <p className={style.rightsText}>2021 © PHBWORX.COM | All rights reserved</p>
+                    <p className={style.rightsText}>2021 © global.ebuddy.COM | All rights reserved</p>
         </div>
 
         

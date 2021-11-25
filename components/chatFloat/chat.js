@@ -7,6 +7,14 @@ import TextField from '@material-ui/core/TextField'
 import ChatMessage from './chatmessage'
 import SendIcon from '@material-ui/icons/Send';
 import CloseIcon from '@material-ui/icons/Close';
+import config from '@/config/configuration.json';
+import axios from 'axios';
+import qs from 'qs'
+import Link from 'next/link'
+import SearchIcon from '@material-ui/icons/Search';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import ContactSupportIcon from '@material-ui/icons/ContactSupport';
+
 
   function scrollToBottom (id) {
     var div = document.getElementById(id);
@@ -52,7 +60,32 @@ export default function Chat() {
     const [messages, setMessages] =  React.useState([]);
     const [userData, setUserData] =  React.useState();
     const [message, setMessage] =  React.useState([]);
- 
+    const [search, setSearch] =  React.useState();
+    const [feature, setFeature] = React.useState([])
+    const [load , setLoad] = React.useState(false)
+
+    React.useEffect(() => {
+
+        async function getBlog() { 
+            try{
+                setLoad(true)
+                const query = qs.stringify({ _where: { _or:[{"subject": "FAQ"}]} });
+                const newdata = await axios.get(`${config.SERVER_URL}/blogs?${query}`);
+                console.log("nEw Data",newdata.data);
+                setFeature(newdata.data);
+                setLoad(false)
+            }catch(err){
+                console.log("second request",err)
+            }
+            
+        }
+
+        
+        getBlog()
+        
+
+    }, [])
+
     function checkCookie() {
         let username = getCookie("userId")
         let room = getCookie("roomId")
@@ -75,16 +108,53 @@ export default function Chat() {
     }
     
 
+    const toggle =  function() {
+        setOpen(!open)
+    }
+
     const handleChange = (e) => {
         setMessage(e.target.value);
-      }
-      
-    const handleEnter = (e) => {
+    }
+
+    const onMessageEnter = (e) => {
         if (e.key === "Enter") {
             e.preventDefault();
             handleClick()
         }
     }
+
+    const onSetSearch = (e) => {
+        setSearch(e.target.value);
+    }
+
+    const onSearchEnter = (e) => {
+        if (e.key === "Enter") {
+            e.preventDefault();
+            onSearch()
+        }
+    }
+    
+    const onSearch = async (e) => {
+        setFeature([]);
+        setLoad(true)
+        try{
+            const query = qs.stringify({ 
+                _where: { 
+                    _or:[{"subject_contains": search}, {"content_contains": search},{"title_contains": search}, {"description_contains": search}]} });
+            console.log(query)
+            const newdata = await axios.get(`${config.SERVER_URL}/blogs?${query}&_limit=10`);
+            console.log("nEw Data",newdata.data);
+            setFeature(newdata.data);
+            setMessage()
+            setLoad(false)
+
+        }catch(err){
+            console.log("second request",err)
+            setFeature([]);
+            setLoad(false)
+        }
+    }
+      
 
 
     const handleClick = (e) => {
@@ -104,9 +174,7 @@ export default function Chat() {
         }
     }
 
-    const toggle =  function() {
-        setOpen(!open)
-    }
+   
 
 
     React.useEffect(() => {
@@ -142,15 +210,13 @@ export default function Chat() {
 
 
     const handleStart = (e) => {
-        const service =  e.target.innerText
+        const service =  message ? message : "No Reasons"
         const username = `user_${randomNumber()}`
         const room = `room_${randomNumber()}`
-        console.log(service,username,room)
 
         socket.emit('join', { username, room, service }, (error) => {
             if(error) {
-                setError(error)
-                alert(error);
+                console.log(error)
             } else {
                 setCookie("userId", username, 3)
                 setCookie("roomId", room, 3)
@@ -187,7 +253,7 @@ export default function Chat() {
                 multiline
                 variant="outlined"
                 value={message}
-                onKeyPress={handleEnter}
+                onKeyPress={onMessageEnter}
                 onChange={handleChange}
                 />
                 <h4 className={styles.sendButton} onClick={handleClick} > <SendIcon style={{fontSize: '20px', color: '#1877F2'}}/></h4>
@@ -200,46 +266,59 @@ export default function Chat() {
                 <h4 className={styles.label1}>What can we help you with?</h4>
                 <div className={styles.label2} onClick={toggle}><CloseIcon/></div>
             </div>
-                
+            <div className={styles.inputBox}>
+                <TextField
+                id="outlined-multiline-static"
+                placeholder="Type here."
+                multiline
+                variant="outlined"
+                value={search}
+                onKeyPress={onSearchEnter}
+                onChange={onSetSearch}
+                />
+                <h4 className={styles.sendButton} onClick={onSearch} > <SearchIcon style={{fontSize: '20px', color: '#1877F2'}}/></h4>
+            </div>           
             <div className={styles.services}>
+                {!(feature.length === 0) ? 
                 <div className={styles.questionContainer}>
+                    {feature.map((data,index)=>{
+                        return (
+                            <Link href={`/info/article/${data.id}`} key={data.title}>
+                                <button className={styles.question} key={index} onClick={toggle}>
+                                        {data.title}
+                                    </button>
+                            </Link>
+                        )
+                    })}
                     <button className={styles.question} onClick={handleStart}>
-                        What is This?
-                    </button>
-                    <button className={styles.question} onClick={handleStart}>
-                        What is That?
-                    </button>
-                    <button className={styles.question} onClick={handleStart}>
-                        How to do that?
-                    </button>
-                    <button className={styles.question} onClick={handleStart}>
-                        Where to do this and that with a some of that?
-                    </button>
-
-                    <button className={styles.question} onClick={handleStart}>
-                        Where to do this and that with a some of that?
-                    </button>
-                    <button className={styles.question} onClick={handleStart}>
-                        Can I order this?
-                    </button>
-                    <button className={styles.question} onClick={handleStart}>
-                        How Much is This?
-                    </button>
-                    <button className={styles.question} onClick={handleStart}>
-                        How to return that?
-                    </button>
-                    <button className={styles.question} onClick={handleStart}>
-                        How Much are you giving me here?
+                       <ContactSupportIcon/> Talk to Customer ServiceR
                     </button>
                 </div>
+                :
+                <div className={styles.questionContainer}>
+                    {load 
+                    ?
+                     <CircularProgress /> 
+                    : 
+                        <>
+                        <h5>Nothing Found</h5>
+                        <button className={styles.question} onClick={handleStart}>
+                            Talk to Customer Service
+                        </button>
+                        </>
+                    }
+                </div>
+                }
+
                 
-            </div>                
+            </div>   
+              
         </div>
 
 
 
         <div className={open ? styles.closeFloatButton : styles.floatButton} onClick={toggle}>
-            Message
+            Need Help?
         </div>
 
 
