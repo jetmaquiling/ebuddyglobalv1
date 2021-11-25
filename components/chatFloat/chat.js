@@ -143,7 +143,7 @@ export default function Chat() {
         try{
             const query = qs.stringify({ 
                 _where: { 
-                    _or:[{"subject_contains": search}, {"content_contains": search},{"title_contains": search}, {"description_contains": search}]} });
+                    _or:[{"subject_contains": search}, {"content_contains": search},{"title_contains": search}, {"description_contains": search}, {"tag": search} ]} });
             console.log(query)
             const newdata = await axios.get(`${config.SERVER_URL}/blogs?${query}&_limit=10`);
             console.log("nEw Data",newdata.data);
@@ -201,7 +201,7 @@ export default function Chat() {
             scrollToBottom("userMessageBox")
         });
 
-        socket.on('resetCookies', (error) => {
+        socket.on('resetCookies', (e) => {
             console.log("RESETTING COOKIE")
             setFirst(true)
         });
