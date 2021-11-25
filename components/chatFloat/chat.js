@@ -63,6 +63,8 @@ export default function Chat() {
     const [search, setSearch] =  React.useState();
     const [feature, setFeature] = React.useState([])
     const [load , setLoad] = React.useState(false)
+    const [question, setQuestion] = React.useState()
+
 
     React.useEffect(() => {
 
@@ -135,6 +137,7 @@ export default function Chat() {
     }
     
     const onSearch = async (e) => {
+        if(search == ""){ return }
         setFeature([]);
         setLoad(true)
         try{
@@ -145,7 +148,8 @@ export default function Chat() {
             const newdata = await axios.get(`${config.SERVER_URL}/blogs?${query}&_limit=10`);
             console.log("nEw Data",newdata.data);
             setFeature(newdata.data);
-            setMessage()
+            setQuestion(search)
+            setSearch("")
             setLoad(false)
 
         }catch(err){
@@ -210,7 +214,7 @@ export default function Chat() {
 
 
     const handleStart = (e) => {
-        const service =  message ? message : "No Reasons"
+        const service =  question == "" ? "Need Help" : question ;
         const username = `user_${randomNumber()}`
         const room = `room_${randomNumber()}`
 
@@ -298,7 +302,7 @@ export default function Chat() {
                 <div className={styles.questionContainer}>
                     {load 
                     ?
-                     <CircularProgress /> 
+                     <CircularProgress style={{color: '#C51111'}} /> 
                     : 
                         <>
                         <h5>Nothing Found</h5>
