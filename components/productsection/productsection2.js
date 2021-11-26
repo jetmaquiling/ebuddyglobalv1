@@ -41,13 +41,13 @@ export default function ProductSection2 () {
       <div className={style.main}>
           {product === [] ? <h1>LOADING....</h1> : 
             product.map((data,index)=>{
-      
+              console.log("DATA CHECH NHERE", data)
               return (
                   <LazyLoad height={10} key={data.title}>
                     <div className={index % 2 == 0 ? style.container2 : style.container1}>
 
                       <div className={style.imageBox}>
-                      <img src={data.clipboard.url} className={style.image} />
+                      <img src={data.clipboard ? data.clipboard.url : "/Resource/products.png"} className={style.image} />
                       </div>
 
                       <div className={style.textBox}>

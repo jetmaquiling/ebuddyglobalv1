@@ -29,6 +29,7 @@ function MyApp({ Component, pageProps }) {
     <>
     <Head>
         <meta charSet="utf-8" />
+        <script async defer crossOrigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0&appId=346633927021436&autoLogAppEvents=1" nonce="HBd29jfB"></script>
         <meta name="theme-color" content="#C51111" />
         <link rel="apple-touch-icon" sizes="180x180" href="/Favicon/apple-touch-icon.png"/>
         <link rel="icon" type="image/png" sizes="32x32" href="/Favicon/favicon-32x32.png"/>

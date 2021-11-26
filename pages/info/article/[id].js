@@ -14,6 +14,8 @@ import Skeleton from '@material-ui/lab/Skeleton';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import Button from '@material-ui/core/Button';
 import FacebookIcon from '@material-ui/icons/Facebook';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import MailIcon from '@material-ui/icons/Mail';
 import ShareIcon from '@material-ui/icons/Share';
 import Head from 'next/head'
 import qs from 'qs'
@@ -76,7 +78,7 @@ export default function BlogPage() {
 
 
     const copyCodeToClipboard = () => {
-        navigator.clipboard.writeText(`https://jetzrecords.com/blog/${id}`)
+        navigator.clipboard.writeText(window.location.href)
         setLink(true)
       }
       
@@ -92,7 +94,27 @@ export default function BlogPage() {
                 <HeadV2/>
 
                 <div  className={styles.mainContainer}>
-                
+                    <div className={styles.linkContainer}>
+                        <a  target="_blank"  href={`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`}>
+                        <div className={styles.linkBox}>
+                            <FacebookIcon style={{color:'#fff'}}/>        
+                        </div>
+                        </a> 
+
+                        <a  target="_blank" href={`http://www.twitter.com/share?url=${window.location.href}`}>
+                        <div className={styles.linkBox}>
+                            <TwitterIcon style={{color:'#fff'}}/>
+                        </div>
+                        </a>
+
+                        <a  target="_blank"   href={`mailto:?subject=${blog.title}"&body=${window.location.href}`}>
+                        <div className={styles.linkBox}>
+                            <MailIcon style={{color:'#fff'}}/>
+                        </div>
+                        </a> 
+
+                    </div>
+
                     <h6 className={styles.subject}>{blog.subject}</h6>
                     <h1 className={styles.title}>{blog.title}</h1>
                     

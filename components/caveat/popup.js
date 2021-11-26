@@ -11,7 +11,7 @@ import config from '@/config/configuration.json'
 import axios from 'axios';
 
 export default function Popup() {
-    const [data, setData] = React.useState({popup_image: null , popup_link: "" })
+    const [data, setData] = React.useState({popup_image: null , popup_link: ""})
     const [open, setOpen] = React.useState(false)
     const toggle = () =>{
         setOpen(!open)
@@ -23,18 +23,19 @@ export default function Popup() {
     React.useEffect(() => {
         axios.get(`${config.SERVER_URL}/csr`).then(res => {
             setData({popup_image: res.data.popup_image.url , popup_link: res.data.popup_link })
+
+            if(res.data.is_popup_open){
+                console.log("WORKING")
+                setTimeout(function(){ 
+                    setOpen(true)
+                }, 5000);
+            }
+
         }).catch(error=> {
           console.log(error)
         })
      }, [])
     
-
-    React.useEffect(() => {
-        console.log("WORKING")
-        setTimeout(function(){ 
-            setOpen(true)
-        }, 5000);
-    },[])
 
   return (
             <div className={open ? style.main : style.off} onClick={()=>toggle()}>
