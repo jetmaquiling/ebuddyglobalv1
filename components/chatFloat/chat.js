@@ -14,7 +14,7 @@ import Link from 'next/link'
 import SearchIcon from '@material-ui/icons/Search';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import ContactSupportIcon from '@material-ui/icons/ContactSupport';
-
+import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 
   function scrollToBottom (id) {
     var div = document.getElementById(id);
@@ -64,7 +64,7 @@ export default function Chat({online}) {
     const [feature, setFeature] = React.useState([])
     const [load , setLoad] = React.useState(false)
     const [question, setQuestion] = React.useState("")
-
+    const [mobile, setMobile] = React.useState(true)
 
     React.useEffect(() => {
 
@@ -126,6 +126,11 @@ export default function Chat({online}) {
     }
 
     const onSetSearch = (e) => {
+        var numberOfLineBreaks = (e.target.value.match(/\n/g)||[]).length;
+        if(numberOfLineBreaks == 1){
+            onSearch()
+        }
+        const value = e.target.value.replace(/[\r\n\v]+/g, "");
         setSearch(e.target.value);
     }
 
@@ -162,7 +167,7 @@ export default function Chat({online}) {
 
 
     const handleClick = (e) => {
-        console.log(message)
+   
         if(message) {
             
             socket.emit('sendMessage',{ userData, message, messages }, (error) => {
@@ -233,13 +238,17 @@ export default function Chat({online}) {
             }
         }); 
     }
+
+    const testChange = () => {
+        setMobile(!mobile)
+    }
     
 
 
   return (
     <div className={styles.main}>
     
-        <div className={open && !first ? styles.container : styles.offcontainer}>
+        <div className={open && !first ? styles.container : styles.offcontainer} >
             <div className={styles.head}>
                 <h4 className={styles.label1}>Customer Service Representative</h4>
                 <div className={styles.label2} onClick={toggle}><CloseIcon/></div>
@@ -259,30 +268,34 @@ export default function Chat({online}) {
                 value={message}
                 onKeyPress={onMessageEnter}
                 onChange={handleChange}
+                
                 />
                 <h4 className={styles.sendButton} onClick={handleClick} > <SendIcon style={{fontSize: '20px', color: '#1877F2'}}/></h4>
             </div>
                 
         </div>
 
-        <div className={open && first ? styles.container : styles.offcontainer}>
+        <div  className={`${mobile ? styles.onKeyboard : styles.offKeyboard } ${open && first ? styles.container : styles.offcontainer}`} >
             <div className={styles.head}>
                 <h4 className={styles.label1}>What can we help you with?</h4>
-                <div className={styles.label2} onClick={toggle}><CloseIcon/></div>
+                <div className={styles.label2} ><ExpandLessIcon onClick={testChange}/> <CloseIcon onClick={toggle}/></div>
             </div>
-            <div className={styles.inputBox}>
+            <div  className={styles.inputBox} style={{position:  "sticky"}}>
                 <TextField
                 id="outlined-multiline-static"
-                placeholder="Type here."
+                placeholder="Search here."
                 multiline
                 variant="outlined"
                 value={search}
-                onKeyPress={onSearchEnter}
+                onKeyDown={onSearchEnter}
                 onChange={onSetSearch}
+                onFocus={testChange}
+                onBlur={testChange}
+               
                 />
                 <h4 className={styles.sendButton} onClick={onSearch} > <SearchIcon style={{fontSize: '20px', color: '#1877F2'}}/></h4>
             </div>           
-            <div className={styles.services}>
+            <div  className={styles.services}>
                 {!(feature.length === 0) ? 
                 <div className={styles.questionContainer}>
                     {feature.map((data,index)=>{
@@ -308,7 +321,7 @@ export default function Chat({online}) {
                      <CircularProgress style={{color: '#C51111'}} /> 
                     : 
                         <>
-                        <h5>Nothing Found</h5>
+                        <h5 className={styles.nothing}>Nothing Found</h5>
                         {online && 
                             <button className={styles.question} onClick={handleStart}>
                                 <ContactSupportIcon/> Talk to Customer Service
