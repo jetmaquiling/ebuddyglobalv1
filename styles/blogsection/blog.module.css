@@ -15,7 +15,7 @@
 
 .mainContainer{
     width: 1200px;
-    margin-top: 100px;
+    margin-top: 75px;
     padding: 0px 20px;
 }
 
@@ -188,7 +188,15 @@
 
 
 .linkBox:hover{
+    
     background-color: #c511119f;
+}
+
+
+.logoBox{
+    display: none;
+    width: 65%;
+    justify-content: center;
 }
 
 
@@ -216,6 +224,12 @@
     .sectionB{
         width: 100%;
     }
+
+    .logoBox{
+        display: flex;
+        width: 100%;
+    }
+    
     
 
 }
@@ -269,7 +283,7 @@
     }
     .mainContainer{
         max-width: 100%;
-        margin-top: 75px;
+        margin-top: 40px;
         padding: 0px 20px;
         text-align: center;
     }

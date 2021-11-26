@@ -94,6 +94,11 @@ export default function BlogPage() {
                 <HeadV2/>
 
                 <div  className={styles.mainContainer}>
+                    
+                    <div className={styles.logoBox}>
+                        <img src="/Logo/EbuddyLogoBlack.png" className={styles.logo} />
+                    </div>
+
                     <div className={styles.linkContainer}>
                         <a  target="_blank"  href={`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`}>
                         <div className={styles.linkBox}>

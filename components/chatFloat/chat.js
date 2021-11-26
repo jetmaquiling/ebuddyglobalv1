@@ -54,7 +54,7 @@ function randomNumber() {
 
 
 
-export default function Chat() {
+export default function Chat({online}) {
     const [first, setFirst] = React.useState(true)
     const [open, setOpen] = React.useState(false)
     const [messages, setMessages] =  React.useState([]);
@@ -294,9 +294,12 @@ export default function Chat() {
                             </Link>
                         )
                     })}
-                    <button className={styles.question} onClick={handleStart}>
-                       <ContactSupportIcon/> Talk to Customer ServiceR
-                    </button>
+                    {online && 
+                        <button className={styles.question} onClick={handleStart}>
+                            <ContactSupportIcon/> Talk to Customer Service
+                        </button>
+                    }
+                    
                 </div>
                 :
                 <div className={styles.questionContainer}>
@@ -306,9 +309,11 @@ export default function Chat() {
                     : 
                         <>
                         <h5>Nothing Found</h5>
-                        <button className={styles.question} onClick={handleStart}>
-                            Talk to Customer Service
-                        </button>
+                        {online && 
+                            <button className={styles.question} onClick={handleStart}>
+                                <ContactSupportIcon/> Talk to Customer Service
+                            </button>
+                        }
                         </>
                     }
                 </div>
