@@ -63,7 +63,7 @@ export default function Chat({online}) {
     const [search, setSearch] =  React.useState();
     const [feature, setFeature] = React.useState([])
     const [load , setLoad] = React.useState(false)
-    const [question, setQuestion] = React.useState()
+    const [question, setQuestion] = React.useState("")
 
 
     React.useEffect(() => {
@@ -214,7 +214,7 @@ export default function Chat({online}) {
 
 
     const handleStart = (e) => {
-        const service =  question == "" ? "Need Help" : question ;
+        const service =  question == "" ? "Assist: Need Help" : `Assist: ${question}` ;
         const username = `user_${randomNumber()}`
         const room = `room_${randomNumber()}`
 
