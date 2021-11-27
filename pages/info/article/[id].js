@@ -102,7 +102,7 @@ export default function BlogPage({article}) {
                 <div  className={styles.mainContainer}>
                     
                     <div className={styles.logoBox}>
-                        <img src="/MainLogo/EbuddyLogoBlack.png" className={styles.logo} />
+                        <img src="/Favicon/logoblack.png" className={styles.logo} />
                     </div>
 
                     <div className={styles.linkContainer}>

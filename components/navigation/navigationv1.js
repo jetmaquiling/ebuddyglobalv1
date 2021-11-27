@@ -13,7 +13,7 @@ const NavigationV1 = ({pos,open, setOpen}) => {
         <div className={style.navbar}>
           <div className={style.navbar1}>
               <div className={style.tinylogoToken}>
-                <img src={'/MainLogo/EbuddyLogo.png'} alt="MainLogo"  className={style.logoToken}/>
+                <img src={'/Favicon/logo.png'} alt="MainLogo"  className={style.logoToken}/>
               </div>
           </div>
           <div className={style.midnav}>
