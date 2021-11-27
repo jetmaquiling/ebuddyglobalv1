@@ -36,7 +36,7 @@ export default function Section2({openVideo,setOpenVideo}) {
                 <div className={style.documentContainer}>
                     <div className={style.documentBox}>
                         <h1 className={style.titleBody2}>How It Works?</h1>
-                        <p className={style.textBody2}>We all have one thing in common, we are all CONSUMERS. The main concept of Global eBuddy is the ablility to convert consumers into BUSINESSMAN. There are so many ways to earn and it is up to YOU to choose.</p>
+                        <p className={style.textBody2}>We all have one thing in common, we are all CONSUMERS. The main concept of Global eBuddy is the ablility to convert consumers into BUSINESSMEN. There are so many ways to earn and it is up to YOU to choose.</p>
                         <div  className={style.buttonContainer} >
                         <div  className={`${style.buttonBox} `} onClick={()=>toggle("https://www.youtube.com/embed/V5Is1K5Bprs")} >
                             <h4 className={style.buttonFont} >Watch Video</h4>
@@ -58,7 +58,7 @@ export default function Section2({openVideo,setOpenVideo}) {
                     <div className={style.documentBox}>
                         
                         <h1 className={style.titleBody2}> Passive Income</h1>
-                        <p className={style.textBody2}>Enjoy residual income while building organization with our Business Plan</p>
+                        <p className={style.textBody2}>Enjoy residual income while building an organization with our Business Plan</p>
                         <br/>
                         <h1 className={style.titleBody2}> Compensations</h1>
                         <p className={style.textBody2}>Improved compensations and bonuses received by the members of the network.</p>

@@ -96,7 +96,7 @@ export default function BlogPage() {
                 <div  className={styles.mainContainer}>
                     
                     <div className={styles.logoBox}>
-                        <img src="/Logo/EbuddyLogoBlack.png" className={styles.logo} />
+                        <img src="/MainLogo/EbuddyLogoBlack.png" className={styles.logo} />
                     </div>
 
                     <div className={styles.linkContainer}>

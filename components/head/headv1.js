@@ -19,7 +19,7 @@ const HeadV1 = ({pos, open, setOpen}) => {
               <div className={style.tinylogoToken}>
   
                 <a href="/">
-                <img  src={"/Logo/EbuddyLogo.png"}  alt="logo" className={style.logo}/>
+                <img  src={"/MainLogo/EbuddyLogo.png"}  alt="MainLogo" className={style.logo}/>
                 </a>
               </div>
                        

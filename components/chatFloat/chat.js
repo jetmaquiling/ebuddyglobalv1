@@ -148,7 +148,7 @@ export default function Chat({online}) {
         try{
             const query = qs.stringify({ 
                 _where: { 
-                    _or:[{"subject_contains": search}, {"content_contains": search},{"title_contains": search}, {"description_contains": search}, {"tag": search} ]} });
+                    _or:[{"subject_contains": search}, {"content_contains": search},{"title_contains": search}, {"description_contains": search}, {"tag_contains": search} ]} });
             console.log(query)
             const newdata = await axios.get(`${config.SERVER_URL}/blogs?${query}&_limit=10`);
             console.log("nEw Data",newdata.data);
