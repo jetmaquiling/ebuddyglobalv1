@@ -24,7 +24,7 @@ import Footer1 from '@/components/footer/footer';
 
 const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)
 
-export default function BlogPage() {
+export default function BlogPage({article}) {
     const myRef = React.useRef(null);
     const router = useRouter();
     const id = router.query.id
@@ -86,11 +86,17 @@ export default function BlogPage() {
         return (
 
             <div className={styles.root} ref={myRef} >
-              
-                <Head>  
-                    <title>{blog.title}</title>
-                    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-                </Head>
+            
+                    <Head>
+                        <meta property="og:type" content="website" />
+                        <title>{article.title}</title>
+                        <meta property="og:title" content={article.title} />
+                        <meta property="og:image" content={article.clipboard.url} />
+                        <meta property="og:description" content={article.description} />
+                    </Head>
+        
+                
+
                 <HeadV2/>
 
                 <div  className={styles.mainContainer}>
@@ -210,3 +216,21 @@ export default function BlogPage() {
     
 }
   
+
+export async function getServerSideProps(context) {
+    const  { id } = context.params;
+    let article = null;
+    await fetch(`${config.SERVER_URL}/blogs/${id}`)
+      .then((response) => response.json())
+      .then((json) =>{
+        article=json
+      })
+  
+    return {
+      props: {
+        article,
+      },
+    };
+  };
+
+
