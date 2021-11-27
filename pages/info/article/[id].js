@@ -171,6 +171,15 @@ export default function BlogPage({article}) {
     }else{
         return(
             <div className={styles.root} ref={myRef}>
+                <Head>
+                    <meta property="og:type" content="website" />
+                    <title>{article.title}</title>
+                    <meta property="og:title" content={article.title} />
+                    <meta property="og:image" content={article.clipboard.url} />
+                    <meta property="og:description" content={article.description} />
+                </Head>
+        
+                
                 <div  className={styles.main}>
                       
                     <Typography variant="h2" >
