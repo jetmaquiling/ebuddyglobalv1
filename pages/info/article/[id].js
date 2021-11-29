@@ -62,7 +62,7 @@ export default function BlogPage({article}) {
 
             try{
                 const query = qs.stringify({ _where: { _or:[{"subject": blog.subject} ]} });
-                const newdata = await axios.get(`${config.SERVER_URL}/blogs?${query}&_limit=5`);
+                const newdata = await axios.get(`${config.SERVER_URL}/blogs?${query}&_limit=5&_sort=updated_at:desc`);
                 setFeature(newdata.data);
 
             }catch(err){
@@ -91,7 +91,7 @@ export default function BlogPage({article}) {
                         <meta property="og:type" content="website" />
                         <title>{article.title}</title>
                         <meta property="og:title" content={article.title} />
-                        <meta property="og:image" content={article.clipboard.url} />
+                        <meta property="og:image" content={article.clipboard ? article.clipboard.url : "/Thumbnail/ebuddy.jpg"} />
                         <meta property="og:description" content={article.description} />
                     </Head>
         

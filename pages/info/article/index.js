@@ -18,7 +18,7 @@ import axios from 'axios';
 
 export default function Article () {
   const [articles, setArticles] = React.useState([])
-  const [page, setPage] = React.useState(2)
+  const [page, setPage] = React.useState(1)
   const [load, setLoad] = React.useState(false)
 
   React.useEffect(() => {
@@ -26,7 +26,7 @@ export default function Article () {
     async function getBlog() { 
         try{
             setLoad(true)
-            const newdata = await axios.get(`${config.SERVER_URL}/blogs?_start=${page === 1 ? page : (page -1)*8}&_limit=8`);
+            const newdata = await axios.get(`${config.SERVER_URL}/blogs?_start=${page === 1 ? page : (page -1)*8}&_limit=8&_sort=updated_at:desc`);
             console.log("nEw Data",newdata.data);
             setArticles(newdata.data);
             setLoad(false)

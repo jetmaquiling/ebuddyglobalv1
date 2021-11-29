@@ -38,9 +38,9 @@ export default function Section2({openVideo,setOpenVideo}) {
                         <h1 className={style.titleBody2}>How It Works?</h1>
                         <p className={style.textBody2}>We all have one thing in common, we are all CONSUMERS. The main concept of Global eBuddy is the ablility to convert consumers into BUSINESSMEN. There are so many ways to earn and it is up to YOU to choose.</p>
                         <div  className={style.buttonContainer} >
-                        <div  className={`${style.buttonBox} `} onClick={()=>toggle("https://www.youtube.com/embed/V5Is1K5Bprs")} >
+                        {/* <div  className={`${style.buttonBox} `} onClick={()=>toggle("https://www.youtube.com/embed/V5Is1K5Bprs")} >
                             <h4 className={style.buttonFont} >Watch Video</h4>
-                        </div>
+                        </div> */}
                         </div>
 
                     </div>

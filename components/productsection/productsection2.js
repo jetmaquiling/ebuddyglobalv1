@@ -20,7 +20,7 @@ export default function ProductSection2 () {
       async function getBlog() { 
           try{
               const query = qs.stringify({ _where: { _or:[{"subject": "PRODUCT"}]} });
-              const newdata = await axios.get(`${config.SERVER_URL}/blogs?${query}`);
+              const newdata = await axios.get(`${config.SERVER_URL}/blogs?${query}&_sort=updated_at:desc`);
               console.log("nEw Data",newdata.data);
               setProduct(newdata.data);
 
