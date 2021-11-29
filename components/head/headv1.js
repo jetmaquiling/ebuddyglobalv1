@@ -57,7 +57,7 @@ const HeadV1 = ({pos, open, setOpen}) => {
 
                 <Link  href="/info/article">
                 <div  className={style.buttonBox} >
-                  <h4 className={style.buttonFont}>Read</h4>
+                  <h4 className={style.buttonFont}>About</h4>
                 </div>
                 </Link>
 

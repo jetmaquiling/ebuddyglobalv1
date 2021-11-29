@@ -15,6 +15,8 @@ import SearchIcon from '@material-ui/icons/Search';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import ContactSupportIcon from '@material-ui/icons/ContactSupport';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
+import Router from 'next/router'
+
 
   function scrollToBottom (id) {
     var div = document.getElementById(id);
@@ -108,6 +110,23 @@ export default function Chat({online}) {
             
         }
     }
+
+
+    const redirectUser = (message) =>{
+        try {
+            
+            if(message.user === 'CSR'){
+                const item = message.text.split(" ", 2)
+                if(item[0] == "REDIRECT"){
+                    Router.push(item[1])
+                }
+            }
+            
+        }catch(error){
+
+        }
+        
+    }
     
 
     const toggle =  function() {
@@ -188,6 +207,7 @@ export default function Chat({online}) {
 
     React.useEffect(() => {
         checkCookie()
+
         socket.on('welcome', (data) => {
             console.log("effect",data)
             setUserData(data);
@@ -200,22 +220,23 @@ export default function Chat({online}) {
             scrollToBottom("userMessageBox")
         });
         
-        socket.on('deliverClientMessages', (message, error) => {
-
+        socket.on('deliverClientMessages', (message, error)  =>{
             setMessages(msgs => [ ...msgs, message ]);
+            redirectUser(message)
             scrollToBottom("userMessageBox")
         });
-
+    
         socket.on('resetCookies', (e) => {
             console.log("RESETTING COOKIE")
             setFirst(true)
         });
+        
      
-
-      
-
+        
     }, [])
 
+ 
+ 
 
 
     const handleStart = (e) => {
@@ -277,7 +298,7 @@ export default function Chat({online}) {
 
         <div  className={`${mobile ? styles.onKeyboard : styles.offKeyboard } ${open && first ? styles.container : styles.offcontainer}`} >
             <div className={styles.head}>
-                <h4 className={styles.label1}>What can we help you with?</h4>
+                <h4 className={styles.label1}>What can I help you with?</h4>
                 <div className={styles.label2} ><ExpandLessIcon onClick={testChange}/> <CloseIcon onClick={toggle}/></div>
             </div>
             <div  className={styles.inputBox} style={{position:  "sticky"}}>

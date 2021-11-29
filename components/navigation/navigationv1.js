@@ -37,6 +37,10 @@ const NavigationV1 = ({pos,open, setOpen}) => {
                 <Link href="https://beta.phb2020.com/login"><h4 className={style.specialh4animate}>Log in</h4></Link>
               </div>
               
+              <div  className={style.specialbuttonBox}>
+                <Link href="https://ebuddy.ph/"><h4 className={style.h4animate}>Shop Now</h4></Link>
+              </div>
+
               <div  className={style.buttonBox}>
                 <Link href="/info/about"><h4 className={style.h4animate}>About us</h4></Link>
               </div>
@@ -45,9 +49,7 @@ const NavigationV1 = ({pos,open, setOpen}) => {
                 <Link href="/info/plan"><h4 className={style.h4animate}>Business Plan</h4></Link>
               </div>
 
-              <div  className={style.buttonBox}>
-                <Link href="https://ebuddy.ph/"><h4 className={style.h4animate}>ebuddy.ph</h4></Link>
-              </div>
+             
               
 
               <div  className={style.buttonBox}>
@@ -66,7 +68,7 @@ const NavigationV1 = ({pos,open, setOpen}) => {
 
         </div>
         <div className={style.rightsBox}>
-                    <p className={style.rightsText}>2021 © global.ebuddy.COM | All rights reserved</p>
+                    <p className={style.rightsText}>2021 © globalebuddy.COM | All rights reserved</p>
         </div>
 
         

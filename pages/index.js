@@ -27,11 +27,11 @@ export default function LandingPage () {
   return (
       <div className={style.main} >
         <Head>
-          <title>PHBWorx - We are A People Helping Business</title>
-          <meta name="description" content="We make it easy for you! Comfortable Life For All! Earn While Spending"/>
+          <title>Global eBuddy.PH - Shop and Earn Like No Other</title>
+          <meta name="description" content="Shop and Earn Like No Other"/>
           <meta property="og:type"               content="website" />
-          <meta property="og:title"              content="Global ebuddy  - We are A People Helping Business" />
-          <meta property="og:image"              content='./Thumbnail/ebuddy.png' />
+          <meta property="og:title"              content="Global ebuddy  - Shop and Earn Like No Other" />
+          <meta property="og:image"              content='./Thumbnail/ebuddy.jpg' />
         </Head>
         
           <Youtube openVideo={openVideo} setOpenVideo={setOpenVideo}/>

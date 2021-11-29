@@ -123,6 +123,11 @@
     align-items: center;
 }
 
+.buttonBox:hover {
+    transition: 0.5s;
+    background-position: 100% 50%;
+}
+
 .buttonBox2{
     margin: 0px 10px 0px 0px;
     cursor: pointer;
@@ -140,10 +145,7 @@
     background: #c92424
 }
 
-.buttonBox:hover {
-    transition: 0.5s;
-    background-position: 100% 50%;
-}
+
 /****************************************/
 
 .buttonFont{

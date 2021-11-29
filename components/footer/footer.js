@@ -15,7 +15,7 @@ export default function Footer1() {
 
   return (
         <div className={style.main}>
-            <h3 className={style.title}>We Make It Easy For You.</h3>
+            <h3 className={style.title}>Shop and Earn Like No Other.</h3>
                 <div className={style.maincontainer}>
                     <div className={style.section1}>
                         <h3 className={style.label}>
@@ -25,24 +25,29 @@ export default function Footer1() {
                         <div className={style.links1}>
                             <Link href="/info/about">
                                 <p className={style.textlink}>
-                                    About us
+                                    About 
                                 </p>
                             </Link>
 
-                            <Link href="/info/join">
+                            <Link href="/info/plan">
                                 <p className={style.textlink}>
                                     Affiliate Marketing
                                 </p>
                             </Link>
-                            <Link href="/info/join">
+                            <Link href="/info/plan">
                                 <p className={style.textlink}>
                                     Membership Shopping
                                 </p>
                             </Link>
 
-                            <Link href="/info/join">
+                            <Link href="/info/plan">
                                 <p className={style.textlink}>
                                     Business Owners
+                                </p>
+                            </Link>
+                            <Link href="https://beta.phb2020.com/login">
+                                <p className={style.textlink}>
+                                    My Dashboard
                                 </p>
                             </Link>
                             <Link href="https://ebuddy.ph/">
@@ -50,31 +55,13 @@ export default function Footer1() {
                                     ebuddy.ph
                                 </p>
                             </Link>
-                            <Link href="/info/community">
-                                <p className={style.textlink}>
-                                    Community
-                                </p>
-                            </Link>
+                        
                             <Link href="/info/products">
                                 <p className={style.textlink}>
                                     Products
                                 </p>
                             </Link>
-                            <Link href="/info/c2b">
-                                <p className={style.textlink}>
-                                    C2B Plan
-                                </p>
-                            </Link>
-                            <Link href="/info/booster">
-                                <p className={style.textlink}>
-                                    Booster Plan
-                                </p>
-                            </Link>
-                            <Link href="/info/combo">
-                                <p className={style.textlink}>
-                                    Combo Plan
-                                </p>
-                            </Link>
+                            
                         </div>
                     </div>
                     <div className={style.section2}>
@@ -95,7 +82,7 @@ export default function Footer1() {
                         
                     </div>
                 </div>
-                <h3 className={style.copywrite}>Copyright©globalebuddy.ph•2021</h3>
+                <h3 className={style.copywrite}>Copyright©globalebuddy.com•2021</h3>
         </div>
   );
 }
