@@ -62,7 +62,7 @@ export default function BlogPage({article}) {
 
             try{
                 const query = qs.stringify({ _where: { _or:[{"subject": blog.subject} ]} });
-                const newdata = await axios.get(`${config.SERVER_URL}/blogs?${query}&_limit=7`);
+                const newdata = await axios.get(`${config.SERVER_URL}/blogs?${query}&_limit=5`);
                 setFeature(newdata.data);
 
             }catch(err){

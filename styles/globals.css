@@ -72,6 +72,11 @@ fieldset{
 }
 
 
+.MuiSvgIcon-root{
+  font-size: 0px;
+   display: none;
+}
+
 #__next {
   display: flex;
   flex-direction: column;

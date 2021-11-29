@@ -14,7 +14,6 @@ import qs from 'qs'
 
 export default function ProductSection2 () {
   const [product, setProduct] = React.useState([])
-  const [side, setSide] = React.useState(true);
 
   React.useEffect(() => {
 
@@ -41,7 +40,7 @@ export default function ProductSection2 () {
       <div className={style.main}>
           {product === [] ? <h1>LOADING....</h1> : 
             product.map((data,index)=>{
-              console.log("DATA CHECH NHERE", data)
+  
               return (
                   <LazyLoad height={10} key={data.title}>
                     <div className={index % 2 == 0 ? style.container2 : style.container1}>

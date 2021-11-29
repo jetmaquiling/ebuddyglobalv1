@@ -1,0 +1,118 @@
+.main{
+    width: 100%;
+    height: 100%;
+}
+
+
+.container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.mainTitle{
+    font-size: 30px;
+
+}
+
+.articleContainer{
+    display: flex;
+    max-width: 1000px;
+    flex-wrap: wrap;
+   
+}
+
+.articleBox{
+    width: 25%;
+    padding: 10px;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+.image{
+    width: 100%;
+}
+
+.articleSubject{
+    margin: 0px;
+    font-size: 15px;
+    color: rgb(48, 48, 48);
+    font-weight: 700;
+}
+
+.articleTitle{
+    margin: 0px;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 600;
+}
+
+
+
+.naviagationContainer{
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    justify-content: space-between;
+    margin: 10px 0px;
+}
+
+.navigationButton{
+    background-color: #C51111;
+    margin: 0px 5px;
+    padding: 10px 20px;
+    border-radius: 40px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.navigationButton:hover{
+    background-color: #d13f3f;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .articleBox{
+        width: 50%;
+        padding: 10px;
+        margin-bottom: 50px;
+        cursor: pointer;
+    }
+
+    
+}
+
+
+
+@media only screen and (max-width: 500px) {
+
+    .mainTitle{
+        font-size: 20px;
+        margin: 30px 0px 0px 0px;
+    
+    }
+    
+    .articleBox{
+        width: 100%;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+        cursor: pointer;
+    }
+
+    .articleSubject{
+        font-size: 12px;
+    }
+    
+    .articleTitle{
+        font-size: 15px;
+       
+    }
+
+    .navigationButton{
+        margin: 0px 20px;
+        padding: 5px 10px;
+    }
+    
+}

@@ -31,7 +31,7 @@ export default function ProductSection1() {
             </div>
 
             <div className={`${style.bodyImage}`}>
-              <img src='/Resource/default.png'  alt="PHB"  className={`${style.image} ${style.image1}`} />
+              <img src='/Resource/products.png'  alt="PHB"  className={`${style.image} ${style.image1}`} />
             </div>
         </div>
         
