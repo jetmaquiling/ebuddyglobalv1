@@ -38,7 +38,7 @@ const NavigationV1 = ({pos,open, setOpen}) => {
               </div>
               
               <div  className={style.specialbuttonBox}>
-                <Link href="https://ebuddy.ph/"><h4 className={style.h4animate}>Shop Now</h4></Link>
+                <Link href="https://ebuddy.ph/"><h4 className={style.specialh4animate}>Shop Now</h4></Link>
               </div>
 
               <div  className={style.buttonBox}>

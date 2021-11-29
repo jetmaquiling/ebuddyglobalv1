@@ -16,7 +16,7 @@ import Section5 from '@/components/homesection/section5';
 import Section6 from '@/components/homesection/section6';
 import Empty from '@/components/caveat/empty';
 import VideoSection from '@/components/homesection/videosection';
-
+import Script from 'next/script'
 
 
 export default function LandingPage () {
@@ -26,6 +26,22 @@ export default function LandingPage () {
 
   return (
       <div className={style.main} >
+
+          <Script
+            src="https://www.googletagmanager.com/gtag/js?id=G-EVVKEXLFCW"
+            strategy="afterInteractive"
+          />
+
+          <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-EVVKEXLFCW');
+          `}
+        </Script>
+
         <Head>
           <title>Global eBuddy.PH - Shop and Earn Like No Other</title>
           <meta name="description" content="Shop and Earn Like No Other"/>

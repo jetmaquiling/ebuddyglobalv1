@@ -6,14 +6,19 @@ import Chat from '@/components/chatFloat/chat'
 import Popup from '@/components/caveat/popup';
 import config from '@/config/configuration.json'
 import axios from 'axios';
+import Cookie from '@/components/navigation/cookie';
+
+
 
 
 function MyApp({ Component, pageProps }) {
   const [data, setData] = React.useState({})
+  const [allowed, setAllowed] = React.useState(false)
 
-
+ 
 
   React.useEffect(() => {
+    console.log("MAKING TRANSLATION");
     (function googleTranslateElementInit() {
      
       try{
@@ -29,7 +34,7 @@ function MyApp({ Component, pageProps }) {
       }
       
     })();
-  })
+  },[])
 
 
     React.useEffect(() => {
@@ -64,7 +69,9 @@ function MyApp({ Component, pageProps }) {
       </Head>
     {data.is_popup_open && <Popup data={data}/>}
     <Component {...pageProps} />
-    <Chat online={data.is_csr_online} />
+    {allowed &&  <Chat online={data.is_csr_online} />}
+    {!allowed &&  <Cookie allowed={allowed} setAllowed={setAllowed} />}
+    
     </>
   )
 }

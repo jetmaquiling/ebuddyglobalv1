@@ -83,8 +83,7 @@ export default function Chat({online}) {
             }
             
         }
-
-        
+   
         getBlog()
         
 
@@ -133,10 +132,15 @@ export default function Chat({online}) {
         setOpen(!open)
     }
 
+    //This is For Coversation Panel ******************************
     const handleChange = (e) => {
+        var numberOfLineBreaks = (e.target.value.match(/\n/g)||[]).length;
+        if(numberOfLineBreaks == 1){
+            handleClick()
+        }
+        const value = e.target.value.replace(/[\r\n\v]+/g, "");
         setMessage(e.target.value);
     }
-
     const onMessageEnter = (e) => {
         if (e.key === "Enter") {
             e.preventDefault();
@@ -144,6 +148,29 @@ export default function Chat({online}) {
         }
     }
 
+
+    const handleClick = (e) => {
+   
+        if(message) {
+            
+            socket.emit('sendMessage',{ userData, message, messages }, (error) => {
+                if(error) {
+                    alert(error)
+                    history.push('/join');
+                }
+            });
+            
+            setMessage('')
+        } else {
+            alert("Message can't be empty")
+        }
+    }
+
+
+
+
+
+    //This is for Search Panel ******************************
     const onSetSearch = (e) => {
         var numberOfLineBreaks = (e.target.value.match(/\n/g)||[]).length;
         if(numberOfLineBreaks == 1){
@@ -185,24 +212,6 @@ export default function Chat({online}) {
       
 
 
-    const handleClick = (e) => {
-   
-        if(message) {
-            
-            socket.emit('sendMessage',{ userData, message, messages }, (error) => {
-                if(error) {
-                    alert(error)
-                    history.push('/join');
-                }
-            });
-            
-            setMessage('')
-        } else {
-            alert("Message can't be empty")
-        }
-    }
-
-   
 
 
     React.useEffect(() => {

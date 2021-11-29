@@ -52,12 +52,6 @@ display: none !important;
   margin: 15px 0px 0px;
 }
 
-@media only screen and (max-width: 600px) {
-  .goog-te-combo{
-    width: 100%
-  }
-
-}
 
 fieldset{
   display: none;
@@ -83,3 +77,14 @@ fieldset{
   flex-direction: column;
   min-height: 100vh;
 }
+
+
+@media only screen and (max-width: 600px) {
+
+  .goog-te-combo{
+    width: 100%;
+    padding: 1px
+  }
+
+}
+
