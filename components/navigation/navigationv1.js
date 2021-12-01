@@ -30,11 +30,11 @@ const NavigationV1 = ({pos,open, setOpen}) => {
 
               
               <div  className={style.specialbuttonBox}>
-                <Link href="https://beta.phb2020.com/register"><h4 className={style.specialh4animate}>Create Account</h4></Link>
+                <Link href="https://office.phb2020.com/register"><h4 className={style.specialh4animate}>Create Account</h4></Link>
               </div>
 
               <div  className={style.specialbuttonBox}>
-                <Link href="https://beta.phb2020.com/login"><h4 className={style.specialh4animate}>Log in</h4></Link>
+                <Link href="https://office.phb2020.com/login"><h4 className={style.specialh4animate}>Log in</h4></Link>
               </div>
               
               <div  className={style.specialbuttonBox}>

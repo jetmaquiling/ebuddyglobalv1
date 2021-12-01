@@ -45,7 +45,7 @@ export default function Footer1() {
                                     Business Owners
                                 </p>
                             </Link>
-                            <Link href="https://beta.phb2020.com/login">
+                            <Link href="https://office.phb2020.com/login">
                                 <p className={style.textlink}>
                                     My Dashboard
                                 </p>

@@ -73,7 +73,7 @@ export default function Section5() {
                             )   
                         })}
                         
-                            <Link href='https://beta.phb2020.com/register'>
+                            <Link href='https://office.phb2020.com/register'>
                                 <div  className={`${style.buttonBox}`} >
                                     <h4 className={style.buttonFont}>Sign Up Now </h4> 
                                 </div>
@@ -103,7 +103,7 @@ export default function Section5() {
                         })}
                         
                             
-                        <Link href='https://beta.phb2020.com/register'>
+                        <Link href='https://office.phb2020.com/register'>
                             <div  className={`${style.buttonBox}`} >
                                 <h4 className={style.buttonFont}>Sign Up Now </h4> 
                             </div>
@@ -134,7 +134,7 @@ export default function Section5() {
                         
 
 
-                        <Link href='https://beta.phb2020.com/register'>
+                        <Link href='https://office.phb2020.com/register'>
                             <div  className={`${style.specialButtonBox}`} >
                                 <h4 className={style.specialButtonFont}>Sign Up Now  </h4> 
                             </div>
