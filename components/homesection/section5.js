@@ -73,12 +73,12 @@ export default function Section5() {
                             )   
                         })}
                         
-                            <Link href='/info/join'>
+                            <Link href='https://beta.phb2020.com/register'>
                                 <div  className={`${style.buttonBox}`} >
                                     <h4 className={style.buttonFont}>Sign Up Now </h4> 
                                 </div>
                             </Link>
-                            <Link href='/info/c2b'>
+                            <Link href='/info/about'>
                                 <div  className={`${style.specialButtonBox}`} >
                                     <h4 className={style.specialButtonFont}>Learn More </h4> 
                                 </div>
@@ -103,12 +103,12 @@ export default function Section5() {
                         })}
                         
                             
-                        <Link href='/info/join'>
+                        <Link href='https://beta.phb2020.com/register'>
                             <div  className={`${style.buttonBox}`} >
                                 <h4 className={style.buttonFont}>Sign Up Now </h4> 
                             </div>
                         </Link>
-                        <Link href='/info/booster'>
+                        <Link href='/info/about'>
                             <div  className={`${style.specialButtonBox}`} >
                                 <h4 className={style.specialButtonFont}>Learn More</h4> 
                             </div>
@@ -134,12 +134,12 @@ export default function Section5() {
                         
 
 
-                        <Link href='/info/join'>
+                        <Link href='https://beta.phb2020.com/register'>
                             <div  className={`${style.specialButtonBox}`} >
                                 <h4 className={style.specialButtonFont}>Sign Up Now  </h4> 
                             </div>
                         </Link>
-                        <Link href='/info/combo'>
+                        <Link href='/info/about'>
                             <div  className={`${style.buttonBox}`} >
                                 <h4 className={style.buttonFont}>Learn More  </h4> 
                             </div>
