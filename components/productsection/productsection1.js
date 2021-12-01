@@ -19,7 +19,7 @@ export default function ProductSection1() {
         <div className={`${style.mainBody}`}>
             <div className={`${style.bodyContent} `}>
               <h1 className={style.titleBody}>Global eBuddy Products</h1>
-              <p className={style.textBody}>Be the Leading Provider of Networked Life-Enhancing Products and Services Via Easy and Lucrative E-Commerce Platform</p>
+              <p className={style.textBody}>We aim to be the Leading Provider of Networked Life-Enhancing Products and Services Via Easy and Lucrative E-Commerce Platform</p>
               <div  className={style.buttonContainer} >
                 <Link href='/info/join'>
                   <div  className={`${style.buttonBox}`} >
