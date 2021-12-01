@@ -1,0 +1,336 @@
+.main{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: bodyanimate;
+    animation-duration: 1s;
+}
+
+.backdrop{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.432);
+}
+
+
+.off{
+    padding-top: 150px;
+    padding-bottom: 100px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    animation-name: bodyanimate;
+    animation-duration: 1s;
+}
+
+
+
+@keyframes bodyanimate {
+    0%   {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+
+
+
+.mainBox{
+    width: 90%;
+    padding: 0px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background:url("/SVG/whitebackground1.svg");
+    background-color: #F1F1F1;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.575);
+}
+
+
+.imageSide{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image{
+    width: 100%;
+}
+
+.contentSide{
+    width: 60%;
+    padding: 20px
+}
+
+.title{
+    font-size: 50px;
+    margin: 0px 0px 20px 0px;
+    color: #C51111;
+    font-weight: 100;
+}
+.subTitle{
+    font-size: 50px;
+    margin: 0px 0px 20px 0px;
+    color: #C51111;
+    width: 100%;
+    text-align: center;
+    margin: 200px 0px;
+    font-weight: 100;
+}
+
+.label{
+    font-size: 20px;
+    margin: 0px;
+    font-weight: 400;
+}
+
+.warning{
+    color: #C51111;
+    font-size: 14px;
+    margin: 0px;
+    font-weight: 600;
+}
+
+.labelText{
+    font-size: 18px;
+    margin: 0px;
+}
+
+.buttonBox{
+    display: flex;
+    align-items: center;
+    margin: 10px 0px 60px 0px ;
+    flex-wrap: wrap;
+}
+
+.inputBox{
+    margin-bottom: 50px; 
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.inputLong{
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0px 20px 0px;
+    display: inline-block;
+    border: 0px;
+    background-color: #cecece;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: "Poppins";
+    min-height: 150px;
+}
+
+.inputLong:focus{
+    border: 0px;
+    outline: none
+}
+
+.input{
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0px 20px 0px;
+    display: inline-block;
+    border: 0px;
+    background-color: #cecece;
+    border-radius: 40px;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+.input:focus{
+    border: 0px;
+    outline: none
+}
+
+.buttonText{
+    margin: 5px;
+    padding: 12px;
+    color: #000;
+    border: 2px solid #C51111;
+    border-radius: 40px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.buttonText:hover{
+    transition: .3s;
+    background-color: #C51111;
+}
+
+
+.buttonChosenText{
+    margin: 5px;
+    padding: 12px;
+    color: rgb(250, 250, 250);
+    border: 2px solid #c5111100;
+    background-color: #C51111;
+    border-radius: 40px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .3s;
+}
+
+
+.navigationBox{
+    display: flex;
+    align-items: center;
+    margin: 20px 0px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.buttonNavText{
+    margin: 5px;
+    padding: 10px 20px;
+    color: rgb(250, 250, 250);
+    background-color: #202020;
+    box-shadow: 5px 5px 10px rgba(107, 107, 107, 0.575);
+    border-radius: 40px;
+    cursor: pointer;
+    font-weight: 400;
+    transition: .3s;
+}
+
+.imageBox{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.imagePreview{
+    width: 30%;
+    
+}
+
+
+.placeholder{
+    color: #C51111;
+    font-size: 15px;
+    margin: 0px 5px;
+    display: inline;
+}
+
+
+.successContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.iconBox{
+    max-width: 300px;
+    margin: 150px 0px;
+    text-align: center;
+}
+
+
+
+@media only screen and (max-width: 800px) {
+
+
+    .mainBox{
+        flex-direction: column-reverse;
+        width: 98%;
+    }   
+
+     .imageSide{
+        width: 100%;
+    }
+    
+    .contentSide{
+        width: 100%;
+        padding: 20px
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .main{
+        padding-top: 0px;
+        padding-bottom: 50px;
+    }
+    
+    .off{
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+
+    .mainBox{
+        width: 100%;
+        border-radius: 0px;
+    }   
+
+    .contentSide{
+        width: 100%;
+        padding: 20px
+    }
+    
+    .input{
+        width: 100%;
+    }
+
+    .inputLong{
+        width: 100%;
+    }
+
+    .title{
+        font-size: 30px;
+        font-weight: 300;
+    }
+
+    .subTitle{
+        font-size: 30px;
+        font-weight: 300;
+    }
+    
+    .label{
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .placeholder{
+        color: #C51111;
+        font-size: 12px;
+        margin: 0px 5px;
+        display: inline;
+    }
+    
+
+    .buttonText{
+        margin: 5px 2px;
+        padding: 8px 12px;
+        font-weight: 500;
+        transition: .3s;
+    }
+    .buttonChosenText{
+        margin: 5px 2px;
+        padding: 8px 12px;
+        font-weight: 500;
+        transition: .3s;
+    }
+
+    .imagePreview{
+        width: 50%;
+    }
+    
+
+
+    
+}
+
+
+
+

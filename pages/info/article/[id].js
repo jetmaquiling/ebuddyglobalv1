@@ -16,7 +16,7 @@ import Button from '@material-ui/core/Button';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import MailIcon from '@material-ui/icons/Mail';
-import ShareIcon from '@material-ui/icons/Share';
+import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import Head from 'next/head'
 import qs from 'qs'
 import HeadV2 from '@/components/head/headv2';
@@ -87,13 +87,16 @@ export default function BlogPage({article}) {
 
             <div className={styles.root} ref={myRef} >
             
-                    <Head>
-                        <meta property="og:type" content="website" />
-                        <title>{article.title}</title>
-                        <meta property="og:title" content={article.title} />
-                        <meta property="og:image" content={article.clipboard ? article.clipboard.url : "/Thumbnail/ebuddy.jpg"} />
-                        <meta property="og:description" content={article.description} />
-                    </Head>
+                    {article && 
+                        <Head>
+                            <meta property="og:type" content="website" />
+                            <title>{article.title}</title>
+                            <meta property="og:title" content={article.title} />
+                            <meta property="og:image" content={article.clipboard ? article.clipboard.url : "/Thumbnail/ebuddy.jpg"} />
+                            <meta property="og:description" content={article.description} />
+                        </Head>
+                    }
+                    
         
                 
 
@@ -135,9 +138,9 @@ export default function BlogPage({article}) {
                 <div className={styles.sectionContainer}>
                     <div  className={styles.sectionA}>
                         <h2 className={styles.subtitle}>"{blog.description}"</h2>
-                        <h6 className={styles.time}> Updated {moment(blog.published_at).fromNow()} ...</h6>
+                        <h6 className={styles.time}> Updated {moment(blog.updated_at).fromNow()} ...</h6>
                         <div className={styles.content} dangerouslySetInnerHTML={{__html: `${blog.content}`}} />
-
+                        <a className={styles.emailCSR}  target="_blank" href={`mailto:phbworxconcerns.customerservice@gmail.com?subject=${blog.title}`} ><MailOutlineIcon style={{marginRight: '5px'}}/>click here to send email</a>
                     </div>
 
                     <div  className={styles.sectionB}>
@@ -171,13 +174,15 @@ export default function BlogPage({article}) {
     }else{
         return(
             <div className={styles.root} ref={myRef}>
-                <Head>
-                    <meta property="og:type" content="website" />
-                    <title>{article.title}</title>
-                    <meta property="og:title" content={article.title} />
-                    <meta property="og:image" content={article.clipboard.url} />
-                    <meta property="og:description" content={article.description} />
-                </Head>
+                {article && 
+                        <Head>
+                            <meta property="og:type" content="website" />
+                            <title>{article.title}</title>
+                            <meta property="og:title" content={article.title} />
+                            <meta property="og:image" content={article.clipboard ? article.clipboard.url : "/Thumbnail/ebuddy.jpg"} />
+                            <meta property="og:description" content={article.description} />
+                        </Head>
+                    }
         
                 
                 <div  className={styles.main}>
