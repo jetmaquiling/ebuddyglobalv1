@@ -65,19 +65,17 @@ export default function Footer1() {
                         </div>
                     </div>
                     <div className={style.section2}>
-                        <h3 className={style.label}>
+                        {/* <h3 className={style.label}>
                             Follow Us
-                        </h3>
+                        </h3> */}
                         <div className={style.links2}>
-                            <a href="https://www.facebook.com/OfficialPHBworx"><FacebookIcon style={{fontSize: '40px' , color: "#C51111"}} 
-                            className={style.icons}/></a>
-
-
-                            <a href="https://www.instagram.com/phbworxinternational/?hl=en"><InstagramIcon style={{fontSize: '40px', color: "#C51111"}} className={style.icons}/></a>
+                            {/* <a href="https://www.facebook.com/OfficialPHBworx"><FacebookIcon style={{fontSize: '40px' , color: "#C51111"}} 
+                            className={style.icons}/></a> */}
+                            {/* <a href="https://www.instagram.com/phbworxinternational/?hl=en"><InstagramIcon style={{fontSize: '40px', color: "#C51111"}} className={style.icons}/></a>
 
                             <a href="https://www.youtube.com/channel/UCrCcVsRGOcJUt9P-gaF_v0w"><YouTubeIcon style={{fontSize: '40px', color: "#C51111"}} className={style.icons}/></a>
 
-                            <a href="https://ph.linkedin.com/company/phbworx-gbd"><LinkedInIcon style={{fontSize: '40px', color: "#C51111"}} className={style.icons}/></a>
+                            <a href="https://ph.linkedin.com/company/phbworx-gbd"><LinkedInIcon style={{fontSize: '40px', color: "#C51111"}} className={style.icons}/></a> */}
                         </div>
                         
                     </div>

@@ -23,7 +23,6 @@ const boosterData = [
     "An opportunity to enjoy residual income with Binary Compensation Plan.",
     "Earn up to Php 100,000 pairing bonus.",
     "Choose the packages according to your needs.",
-    "Get a percentage of your investment as a return daily.",
     "Payout is protected through capped commissions.",
     "Receive refferal bonus for every new members in your binary tree.",
     "Earn reward points that can be converted into products or digital token."
