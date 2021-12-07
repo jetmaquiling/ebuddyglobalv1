@@ -71,7 +71,7 @@ export default function Form1 () {
     }
   }
 
-  const formPackage = JSON.stringify([{"type": "text", "value":state.message }, {"type": "text", "value":state.email } ,{"type": "text", "value":state.username }, {"type": "image", "value":state.valid_id , "id": state.valid_id_code} ,{"type": "image", "value":state.authorization, "id": state.authorization_code }]); 
+  const formPackage = JSON.stringify([{"type": "text", "label": "message", "value":state.message }, {"type": "text","label": "email", "value":state.email } ,{"type": "text","label": "username", "value":state.username }, {"type": "image","label": "valid_id", "value":state.valid_id , "id": state.valid_id_code} ,{"type": "image", "label": "authorization", "value":state.authorization, "id": state.authorization_code }]); 
 
 
  
