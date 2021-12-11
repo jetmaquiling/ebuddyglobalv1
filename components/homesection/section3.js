@@ -36,7 +36,7 @@ export default function Section3() {
             </div>
 
             <div className={`${style.bodyImage}`}>
-              <img src='/Resource/community2.png'  alt="PHB"  className={`${style.image} ${style.image1}`} />
+              <img src='/Resource/community2.png'  alt="Global Ebuddy"  className={`${style.image} ${style.image1}`} />
             </div>
         </div>
         

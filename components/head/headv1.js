@@ -27,7 +27,7 @@ const HeadV1 = ({pos, open, setOpen}) => {
           
             <div className={style.navbar2 }>
                 
-                <Link href="https://office.phb2020.com/register">
+                <Link href="https://dash.globalebuddy.com/register">
                 <div  className={style.buttonBox}  >
                   <h4 className={style.buttonFont}>Join</h4>
                 </div>

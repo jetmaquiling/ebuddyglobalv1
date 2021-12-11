@@ -34,7 +34,7 @@ export default function Section1() {
                     <h4 className={style.buttonFontSpecial}>Join Now </h4> 
                   </div>
                 </Link>
-                <Link href='https://office.phb2020.com/login' >
+                <Link href='https://dash.globalebuddy.com/login' >
                     <div  className={`${style.buttonBox2}`} >
                         <h4 className={style.buttonFont}>Log In</h4>
                     </div>
