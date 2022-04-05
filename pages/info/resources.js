@@ -23,7 +23,7 @@ export default function AboutUs() {
           content="Comfortable Life For All! Earn While Spending"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Global eBuddy - Resouces" />
+        <meta property="og:title" content="Global eBuddy - Resources" />
         <meta property="og:image" content="./Thumbnail/ebuddy.png" />
       </Head>
       <Youtube openVideo={openVideo} setOpenVideo={setOpenVideo} />
