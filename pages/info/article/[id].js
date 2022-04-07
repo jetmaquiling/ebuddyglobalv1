@@ -151,10 +151,9 @@ export default function BlogPage({ article }) {
             <a
               className={styles.emailCSR}
               target="_blank"
-              href={`mailto:globalebuddy@gmail.com?subject=${blog.title}`}
+              href={`https://www.facebook.com/globalebuddy`}
             >
-              <MailOutlineIcon style={{ marginRight: "5px" }} />
-              click here to send email
+              Go To Global eBuddy Page
             </a>
           </div>
 

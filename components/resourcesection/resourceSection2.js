@@ -9,13 +9,12 @@ export default function ResourceSection() {
     <div className={style.main}>
       <div className={`${style.section}`}>
         <div className={`${style.mainBody}`}>
-          <div className={`${style.image}`}>
-            <img
-              src="/Resource/resourcefile.png"
-              alt="global"
-              className={`${style.image} `}
-            />
-          </div>
+          <img
+            src="/Resource/resourcefile.png"
+            alt="global"
+            className={`${style.image} `}
+          />
+
           <a href="/Files/WEB PPT.pptx">
             <div className={`${style.buttonBox} `}>
               <h6 className={style.button}>Download Powerpoint</h6>
